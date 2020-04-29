@@ -175,7 +175,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     <gazebo>
         <plugin name="imu_controller" filename="libhector_gazebo_ros_imu.so">
             <robotNamespace>$(arg robot_namespace)</robotNamespace>
-            <updateRate>50.0</updateRate>
+            <updateRate>500.0</updateRate>
             <bodyName>base_link</bodyName>
             <topicName>imu/data</topicName>
             <accelDrift>0.005 0.005 0.005</accelDrift>
@@ -203,7 +203,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 
     <!--  Left front camera  -->
     <joint name="left_camera_joint" type="fixed">
-        <origin xyz="${base_x_size/4} ${base_y_size/4} 0.1" />
+        <origin xyz="${base_x_size/4} ${base_y_size/4} 0.1"/>
         <parent link="top_plate_link"/>
         <child link="left_camera_frame"/>
     </joint>
@@ -223,18 +223,18 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     </link>
 
     <joint name="left_camera_optical_joint" type="fixed">
-        <origin xyz="0 0 0" rpy="${-M_PI/2} 0 ${-M_PI/2}" />
-        <parent link="left_camera_frame" />
-        <child link="left_camera_optical_frame" />
+        <origin xyz="0 0 0" rpy="${-M_PI/2} 0 ${-M_PI/2}"/>
+        <parent link="left_camera_frame"/>
+        <child link="left_camera_optical_frame"/>
     </joint>
 
     <link name="left_camera_optical_frame"/>
 
     <!-- Right front camera -->
     <joint name="right_camera_joint" type="fixed">
-        <origin xyz="${base_x_size/4} -${base_y_size/4} 0.1" />
+        <origin xyz="${base_x_size/4} -${base_y_size/4} 0.1"/>
         <parent link="top_plate_link"/>
-        <child link="right_camera_frame" />
+        <child link="right_camera_frame"/>
     </joint>
 
     <link name="right_camera_frame">
@@ -252,9 +252,9 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     </link>
 
     <joint name="right_camera_optical_joint" type="fixed">
-        <origin xyz="0 0 0" rpy="${-M_PI/2} 0 ${-M_PI/2}" />
-        <parent link="right_camera_frame" />
-        <child link="right_camera_optical_frame" />
+        <origin xyz="0 0 0" rpy="${-M_PI/2} 0 ${-M_PI/2}"/>
+        <parent link="right_camera_frame"/>
+        <child link="right_camera_optical_frame"/>
     </joint>
 
     <link name="right_camera_optical_frame"/>
@@ -263,7 +263,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     <joint name="rear_camera_joint" type="fixed">
         <origin xyz="-${base_x_size/4} 0 0.1" rpy="0 0 ${pi}"/>
         <parent link="top_plate_link"/>
-        <child link="rear_camera_frame" />
+        <child link="rear_camera_frame"/>
     </joint>
 
     <link name="rear_camera_frame">
@@ -281,12 +281,98 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     </link>
 
     <joint name="rear_camera_optical_joint" type="fixed">
-        <origin xyz="0 0 0" rpy="${-M_PI/2} 0 ${-M_PI/2}" />
-        <parent link="rear_camera_frame" />
-        <child link="rear_camera_optical_frame" />
+        <origin xyz="0 0 0" rpy="${-M_PI/2} 0 ${-M_PI/2}"/>
+        <parent link="rear_camera_frame"/>
+        <child link="rear_camera_optical_frame"/>
     </joint>
 
     <link name="rear_camera_optical_frame"/>
+
+    <!--
+    <gazebo reference="rear_camera_frame">
+        <sensor name='rear_sensor' type='camera'>
+            <update_rate>30</update_rate>
+
+            <camera name="left_camera">
+                <horizontal_fov>${radians(90)}</horizontal_fov>
+                <image>
+                    <width>320</width>
+                    <height>240</height>
+                    <format>B8G8R8</format>
+                </image>
+
+                <clip>
+                    <near>0.01</near>
+                    <far>300</far>
+                </clip>
+
+                <noise>
+                    <type>gaussian</type>
+                    <mean>0.0</mean>
+                    <stddev>0.0005</stddev>
+                </noise>
+            </camera>
+
+            <plugin name="rear_camera_controller" filename="libgazebo_ros_camera.so">
+                <alwaysOn>true</alwaysOn>
+                <updateRate>0</updateRate>
+                <cameraName>camera/left</cameraName>
+                <imageTopicName>image_raw</imageTopicName>
+                <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+                <frameName>left_camera_optical_frame</frameName>
+
+                <distortionK1>0.0</distortionK1>
+                <distortionK2>0.0</distortionK2>
+                <distortionK3>0.0</distortionK3>
+                <distortionT1>0.0</distortionT1>
+                <distortionT2>0.0</distortionT2>
+            </plugin>
+        </sensor>
+    </gazebo>
+    -->
+
+    <gazebo reference="left_camera_frame">
+        <sensor name="left_camera" type="wideanglecamera">
+            <update_rate>25</update_rate>
+            <always_on>true</always_on>
+
+            <camera>
+                <!-- 185 degrees -->
+                <horizontal_fov>${radians(185)}</horizontal_fov>
+                <image>
+                    <width>754</width>
+                    <height>480</height>
+                </image>
+                <clip>
+                    <near>0.1</near>
+                    <far>100</far>
+                </clip>
+                <lens>
+                    <type>orthographic</type>
+
+                    <!-- if it is set to `true` your horizontal FOV will remain as defined -->
+                    <!-- otherwise it depends on lens type and custom function, if there is one -->
+                    <scale_to_hfov>false</scale_to_hfov>
+
+                    <!-- clip everything that is outside of this angle -->
+                    <!--<cutoff_angle>${pi/2]</cutoff_angle>-->
+
+                    <!-- resolution of the cube-map texture, the higher it is - the sharper is your image -->
+                    <env_texture_size>2048</env_texture_size>
+                </lens>
+            </camera>
+
+            <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+                <alwaysOn>true</alwaysOn>
+                <updateRate>0</updateRate>
+                <cameraName>camera/left</cameraName>
+                <imageTopicName>image_raw</imageTopicName>
+                <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+                <frameName>left_camera_optical_frame</frameName>
+                <hackBaseline>0.0</hackBaseline>
+            </plugin>
+        </sensor>
+    </gazebo>
 
     <!-- Optional custom includes. -->
     <xacro:include filename="$(arg urdf_extras)"/>
