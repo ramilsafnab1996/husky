@@ -288,48 +288,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 
     <link name="rear_camera_optical_frame"/>
 
-    <!--
-    <gazebo reference="rear_camera_frame">
-        <sensor name='rear_sensor' type='camera'>
-            <update_rate>30</update_rate>
-
-            <camera name="left_camera">
-                <horizontal_fov>${radians(90)}</horizontal_fov>
-                <image>
-                    <width>320</width>
-                    <height>240</height>
-                    <format>B8G8R8</format>
-                </image>
-
-                <clip>
-                    <near>0.01</near>
-                    <far>300</far>
-                </clip>
-
-                <noise>
-                    <type>gaussian</type>
-                    <mean>0.0</mean>
-                    <stddev>0.0005</stddev>
-                </noise>
-            </camera>
-
-            <plugin name="rear_camera_controller" filename="libgazebo_ros_camera.so">
-                <alwaysOn>true</alwaysOn>
-                <updateRate>0</updateRate>
-                <cameraName>camera/left</cameraName>
-                <imageTopicName>image_raw</imageTopicName>
-                <cameraInfoTopicName>camera_info</cameraInfoTopicName>
-                <frameName>left_camera_optical_frame</frameName>
-
-                <distortionK1>0.0</distortionK1>
-                <distortionK2>0.0</distortionK2>
-                <distortionK3>0.0</distortionK3>
-                <distortionT1>0.0</distortionT1>
-                <distortionT2>0.0</distortionT2>
-            </plugin>
-        </sensor>
-    </gazebo>
-    -->
+    <!-- Gazebo camera plugins -->
 
     <gazebo reference="left_camera_frame">
         <sensor name="left_camera" type="wideanglecamera">
@@ -369,7 +328,74 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
                 <imageTopicName>image_raw</imageTopicName>
                 <cameraInfoTopicName>camera_info</cameraInfoTopicName>
                 <frameName>left_camera_optical_frame</frameName>
-                <hackBaseline>0.0</hackBaseline>
+            </plugin>
+        </sensor>
+    </gazebo>
+
+    <gazebo reference="right_camera_frame">
+        <sensor name="right_camera" type="wideanglecamera">
+            <update_rate>25</update_rate>
+            <always_on>true</always_on>
+
+            <camera>
+                <horizontal_fov>${radians(185)}</horizontal_fov>
+                <image>
+                    <width>754</width>
+                    <height>480</height>
+                </image>
+                <clip>
+                    <near>0.1</near>
+                    <far>100</far>
+                </clip>
+                <lens>
+                    <type>orthographic</type>
+                    <scale_to_hfov>false</scale_to_hfov>
+                    <!--<cutoff_angle>${pi/2]</cutoff_angle>-->
+                    <env_texture_size>2048</env_texture_size>
+                </lens>
+            </camera>
+
+            <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+                <alwaysOn>true</alwaysOn>
+                <updateRate>0</updateRate>
+                <cameraName>camera/right</cameraName>
+                <imageTopicName>image_raw</imageTopicName>
+                <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+                <frameName>right_camera_optical_frame</frameName>
+            </plugin>
+        </sensor>
+    </gazebo>
+
+    <gazebo reference="rear_camera_frame">
+        <sensor name="rear_camera" type="wideanglecamera">
+            <update_rate>25</update_rate>
+            <always_on>true</always_on>
+
+            <camera>
+                <horizontal_fov>${radians(185)}</horizontal_fov>
+                <image>
+                    <width>754</width>
+                    <height>480</height>
+                </image>
+                <clip>
+                    <near>0.1</near>
+                    <far>100</far>
+                </clip>
+                <lens>
+                    <type>orthographic</type>
+                    <scale_to_hfov>false</scale_to_hfov>
+                    <!--<cutoff_angle>${pi/2]</cutoff_angle>-->
+                    <env_texture_size>2048</env_texture_size>
+                </lens>
+            </camera>
+
+            <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+                <alwaysOn>true</alwaysOn>
+                <updateRate>0</updateRate>
+                <cameraName>camera/rear</cameraName>
+                <imageTopicName>image_raw</imageTopicName>
+                <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+                <frameName>rear_camera_optical_frame</frameName>
             </plugin>
         </sensor>
     </gazebo>
