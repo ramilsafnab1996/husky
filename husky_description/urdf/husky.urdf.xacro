@@ -223,7 +223,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     </link>
 
     <joint name="left_camera_optical_joint" type="fixed">
-        <origin xyz="0 0 0" rpy="${-M_PI/2} 0 ${-M_PI/2}"/>
+        <origin xyz="0 0 0" rpy="${-pi/2} 0 ${-pi/2}"/>
         <parent link="left_camera_frame"/>
         <child link="left_camera_optical_frame"/>
     </joint>
@@ -252,7 +252,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     </link>
 
     <joint name="right_camera_optical_joint" type="fixed">
-        <origin xyz="0 0 0" rpy="${-M_PI/2} 0 ${-M_PI/2}"/>
+        <origin xyz="0 0 0" rpy="${-pi/2} 0 ${-pi/2}"/>
         <parent link="right_camera_frame"/>
         <child link="right_camera_optical_frame"/>
     </joint>
@@ -281,7 +281,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     </link>
 
     <joint name="rear_camera_optical_joint" type="fixed">
-        <origin xyz="0 0 0" rpy="${-M_PI/2} 0 ${-M_PI/2}"/>
+        <origin xyz="0 0 0" rpy="${-pi/2} 0 ${-pi/2}"/>
         <parent link="rear_camera_frame"/>
         <child link="rear_camera_optical_frame"/>
     </joint>
@@ -303,7 +303,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
                     <height>480</height>
                 </image>
                 <clip>
-                    <near>0.1</near>
+                    <near>0.02</near>
                     <far>100</far>
                 </clip>
                 <lens>
@@ -317,7 +317,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
                     <!--<cutoff_angle>${pi/2]</cutoff_angle>-->
 
                     <!-- resolution of the cube-map texture, the higher it is - the sharper is your image -->
-                    <env_texture_size>2048</env_texture_size>
+                    <env_texture_size>1024</env_texture_size>
                 </lens>
             </camera>
 
@@ -344,14 +344,13 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
                     <height>480</height>
                 </image>
                 <clip>
-                    <near>0.1</near>
+                    <near>0.02</near>
                     <far>100</far>
                 </clip>
                 <lens>
                     <type>orthographic</type>
                     <scale_to_hfov>false</scale_to_hfov>
-                    <!--<cutoff_angle>${pi/2]</cutoff_angle>-->
-                    <env_texture_size>2048</env_texture_size>
+                    <env_texture_size>1024</env_texture_size>
                 </lens>
             </camera>
 
@@ -378,14 +377,13 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
                     <height>480</height>
                 </image>
                 <clip>
-                    <near>0.1</near>
+                    <near>0.02</near>
                     <far>100</far>
                 </clip>
                 <lens>
                     <type>orthographic</type>
                     <scale_to_hfov>false</scale_to_hfov>
-                    <!--<cutoff_angle>${pi/2]</cutoff_angle>-->
-                    <env_texture_size>2048</env_texture_size>
+                    <env_texture_size>1024</env_texture_size>
                 </lens>
             </camera>
 
