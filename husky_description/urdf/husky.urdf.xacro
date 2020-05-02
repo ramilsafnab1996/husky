@@ -311,13 +311,13 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 
                     <!-- if it is set to `true` your horizontal FOV will remain as defined -->
                     <!-- otherwise it depends on lens type and custom function, if there is one -->
-                    <scale_to_hfov>false</scale_to_hfov>
+                    <scale_to_hfov>true</scale_to_hfov>
 
                     <!-- clip everything that is outside of this angle -->
-                    <!--<cutoff_angle>${pi/2]</cutoff_angle>-->
+                    <cutoff_angle>${pi/2]</cutoff_angle>
 
                     <!-- resolution of the cube-map texture, the higher it is - the sharper is your image -->
-                    <env_texture_size>1024</env_texture_size>
+                    <env_texture_size>512</env_texture_size>
                 </lens>
             </camera>
 
@@ -349,8 +349,9 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
                 </clip>
                 <lens>
                     <type>orthographic</type>
-                    <scale_to_hfov>false</scale_to_hfov>
-                    <env_texture_size>1024</env_texture_size>
+                    <scale_to_hfov>true</scale_to_hfov>
+                    <cutoff_angle>${pi/2]</cutoff_angle>
+                    <env_texture_size>512</env_texture_size>
                 </lens>
             </camera>
 
@@ -382,8 +383,9 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
                 </clip>
                 <lens>
                     <type>orthographic</type>
-                    <scale_to_hfov>false</scale_to_hfov>
-                    <env_texture_size>1024</env_texture_size>
+                    <scale_to_hfov>true</scale_to_hfov>
+                    <cutoff_angle>${pi/2]</cutoff_angle>
+                    <env_texture_size>512</env_texture_size>
                 </lens>
             </camera>
 
