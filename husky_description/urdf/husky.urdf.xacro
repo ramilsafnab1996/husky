@@ -291,13 +291,13 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     <!-- Gazebo camera plugins -->
 
     <gazebo reference="left_camera_frame">
-        <sensor name="left_camera" type="wideanglecamera">
+        <sensor name="left_camera" type="camera">
             <update_rate>25</update_rate>
             <always_on>true</always_on>
 
             <camera>
                 <!-- 185 degrees -->
-                <horizontal_fov>${radians(185)}</horizontal_fov>
+                <horizontal_fov>${radians(89)}</horizontal_fov>
                 <image>
                     <width>754</width>
                     <height>480</height>
@@ -306,19 +306,6 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
                     <near>0.02</near>
                     <far>100</far>
                 </clip>
-                <lens>
-                    <type>orthographic</type>
-
-                    <!-- if it is set to `true` your horizontal FOV will remain as defined -->
-                    <!-- otherwise it depends on lens type and custom function, if there is one -->
-                    <scale_to_hfov>true</scale_to_hfov>
-
-                    <!-- clip everything that is outside of this angle -->
-                    <cutoff_angle>${pi/2]</cutoff_angle>
-
-                    <!-- resolution of the cube-map texture, the higher it is - the sharper is your image -->
-                    <env_texture_size>512</env_texture_size>
-                </lens>
             </camera>
 
             <plugin name="left_camera_controller" filename="libgazebo_ros_camera.so">
@@ -333,12 +320,12 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     </gazebo>
 
     <gazebo reference="right_camera_frame">
-        <sensor name="right_camera" type="wideanglecamera">
+        <sensor name="right_camera" type="camera">
             <update_rate>25</update_rate>
             <always_on>true</always_on>
 
             <camera>
-                <horizontal_fov>${radians(185)}</horizontal_fov>
+                <horizontal_fov>${radians(89)}</horizontal_fov>
                 <image>
                     <width>754</width>
                     <height>480</height>
@@ -347,12 +334,6 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
                     <near>0.02</near>
                     <far>100</far>
                 </clip>
-                <lens>
-                    <type>orthographic</type>
-                    <scale_to_hfov>true</scale_to_hfov>
-                    <cutoff_angle>${pi/2]</cutoff_angle>
-                    <env_texture_size>512</env_texture_size>
-                </lens>
             </camera>
 
             <plugin name="right_camera_controller" filename="libgazebo_ros_camera.so">
@@ -367,12 +348,12 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     </gazebo>
 
     <gazebo reference="rear_camera_frame">
-        <sensor name="rear_camera" type="wideanglecamera">
+        <sensor name="rear_camera" type="camera">
             <update_rate>25</update_rate>
             <always_on>true</always_on>
 
             <camera>
-                <horizontal_fov>${radians(185)}</horizontal_fov>
+                <horizontal_fov>${radians(89)}</horizontal_fov>
                 <image>
                     <width>754</width>
                     <height>480</height>
@@ -381,12 +362,6 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
                     <near>0.02</near>
                     <far>100</far>
                 </clip>
-                <lens>
-                    <type>orthographic</type>
-                    <scale_to_hfov>true</scale_to_hfov>
-                    <cutoff_angle>${pi/2]</cutoff_angle>
-                    <env_texture_size>512</env_texture_size>
-                </lens>
             </camera>
 
             <plugin name="rear_camera_controller" filename="libgazebo_ros_camera.so">

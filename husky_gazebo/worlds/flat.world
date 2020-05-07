@@ -63,7 +63,7 @@
                     <material>
                         <script>
                             <uri>file://media/materials/scripts/gazebo.material</uri>
-                            <name>Gazebo/Road</name>
+                            <name>Gazebo/White</name>
                         </script>
                     </material>
                 </visual>
@@ -176,55 +176,95 @@
             <pose frame=''>6.15864 5.76342 0 0 -0 0</pose>
         </model>
         <state world_name='default'>
-            <sim_time>0 0</sim_time>
-            <real_time>0 0</real_time>
-            <wall_time>1578992779 482246178</wall_time>
-            <iterations>0</iterations>
-            <model name='cinder_block'>
-                <pose frame=''>3.1809 -12.3511 0.099966 0.000383 -0 0.103271</pose>
+            <sim_time>91 818000000</sim_time>
+            <real_time>92 446508810</real_time>
+            <wall_time>1588876511 604501006</wall_time>
+            <iterations>91818</iterations>
+            <model name='Dumpster'>
+                <pose frame=''>15.0836 1.079 0.101377 1e-06 -0 0.000409</pose>
                 <scale>1 1 1</scale>
                 <link name='link'>
-                    <pose frame=''>3.1809 -12.3511 0.099966 0.000383 -0 0.103271</pose>
+                    <pose frame=''>15.0836 1.079 0.101377 1e-06 -0 0.000409</pose>
+                    <velocity>0 0 0 0 -0 0</velocity>
+                    <acceleration>0 0 -9.79993 4.5e-05 -7e-06 0</acceleration>
+                    <wrench>0 0 -9.79993 0 -0 0</wrench>
+                </link>
+            </model>
+            <model name='bookshelf'>
+                <pose frame=''>16.4772 -12.6019 0.153947 0 0 -1.74849</pose>
+                <scale>1 1 1</scale>
+                <link name='link'>
+                    <pose frame=''>16.4772 -12.6019 0.153947 0 0 -1.74849</pose>
+                    <velocity>0 0 0 0 -0 0</velocity>
+                    <acceleration>0 0 0 0 -0 0</acceleration>
+                    <wrench>0 0 0 0 -0 0</wrench>
+                </link>
+            </model>
+            <model name='cabinet'>
+                <pose frame=''>16.3772 -3.34974 0.132262 0 -0 0</pose>
+                <scale>1 1 1</scale>
+                <link name='cabinet_bottom_plate'>
+                    <pose frame=''>16.3772 -3.34974 0.132262 0 -0 0</pose>
+                    <velocity>0 0 0 0 -0 0</velocity>
+                    <acceleration>0 0 0 0 -0 0</acceleration>
+                    <wrench>0 0 0 0 -0 0</wrench>
+                </link>
+            </model>
+            <model name='cardboard_box'>
+                <pose frame=''>16.0946 -3.34717 0.292994 0.000379 -0.18726 -0.002042</pose>
+                <scale>1 1 1</scale>
+                <link name='link'>
+                    <pose frame=''>16.0946 -3.34717 0.292994 0.000379 -0.18726 -0.002042</pose>
+                    <velocity>0 0 0 0 -0 0</velocity>
+                    <acceleration>1e-05 -5.9e-05 0.000128 0.000393 0.000201 0.000116</acceleration>
+                    <wrench>2e-05 -0.000118 0.000257 0 -0 0</wrench>
+                </link>
+            </model>
+            <model name='cinder_block'>
+                <pose frame=''>3.1809 -12.3511 0.099966 0.000385 -0 0.103271</pose>
+                <scale>1 1 1</scale>
+                <link name='link'>
+                    <pose frame=''>3.1809 -12.3511 0.099966 0.000385 -0 0.103271</pose>
                     <velocity>0 0 0 0 -0 0</velocity>
                     <acceleration>0 0 0 0 -0 0</acceleration>
                     <wrench>0 0 0 0 -0 0</wrench>
                 </link>
             </model>
             <model name='cinder_block_0'>
-                <pose frame=''>2.94781 -11.6533 0.186129 -9.6e-05 0.407611 0.879214</pose>
+                <pose frame=''>2.9479 -11.6533 0.186071 0.001149 0.407758 0.879708</pose>
                 <scale>1 1 1</scale>
                 <link name='link'>
-                    <pose frame=''>2.94781 -11.6533 0.186129 -9.6e-05 0.407611 0.879214</pose>
+                    <pose frame=''>2.9479 -11.6533 0.186071 0.001149 0.407758 0.879708</pose>
                     <velocity>0 0 0 0 -0 0</velocity>
                     <acceleration>0 0 0 0 -0 0</acceleration>
                     <wrench>0 0 0 0 -0 0</wrench>
                 </link>
             </model>
             <model name='cinder_block_1'>
-                <pose frame=''>3.02547 -11.9078 0.317479 2.7789 1.57066 2.91388</pose>
+                <pose frame=''>3.02497 -11.9093 0.317463 2.87624 1.57061 3.02087</pose>
                 <scale>1 1 1</scale>
                 <link name='link'>
-                    <pose frame=''>3.02547 -11.9078 0.317479 2.7789 1.57066 2.91388</pose>
+                    <pose frame=''>3.02497 -11.9093 0.317463 2.87624 1.57061 3.02087</pose>
                     <velocity>0 0 0 0 -0 0</velocity>
-                    <acceleration>1.51243 -1.1012 0.108177 2.12915 0.350625 -0.6424</acceleration>
-                    <wrench>7.56213 -5.50599 0.540884 0 -0 0</wrench>
+                    <acceleration>0.4869 -0.054579 0.168661 -3.014 0.913445 2.98484</acceleration>
+                    <wrench>2.4345 -0.272895 0.843305 0 -0 0</wrench>
                 </link>
             </model>
             <model name='cinder_block_2'>
-                <pose frame=''>2.8002 -11.9523 0.099985 0.000182 0.000553 -0.118687</pose>
+                <pose frame=''>2.8002 -11.9523 0.099959 0.000494 0.001692 -0.118743</pose>
                 <scale>1 1 1</scale>
                 <link name='link'>
-                    <pose frame=''>2.8002 -11.9523 0.099985 0.000182 0.000553 -0.118687</pose>
+                    <pose frame=''>2.8002 -11.9523 0.099959 0.000494 0.001692 -0.118743</pose>
                     <velocity>0 0 0 0 -0 0</velocity>
                     <acceleration>0 0 0 0 -0 0</acceleration>
                     <wrench>0 0 0 0 -0 0</wrench>
                 </link>
             </model>
             <model name='cinder_block_wide'>
-                <pose frame=''>3.18452 -11.127 0.09955 -0.002295 -1e-06 0.027375</pose>
+                <pose frame=''>3.18452 -11.127 0.09955 -0.002295 -3e-06 0.027375</pose>
                 <scale>1 1 1</scale>
                 <link name='link'>
-                    <pose frame=''>3.18452 -11.127 0.09955 -0.002295 -1e-06 0.027375</pose>
+                    <pose frame=''>3.18452 -11.127 0.09955 -0.002295 -3e-06 0.027375</pose>
                     <velocity>0 0 0 0 -0 0</velocity>
                     <acceleration>0 0 0 0 -0 0</acceleration>
                     <wrench>0 0 0 0 -0 0</wrench>
@@ -250,14 +290,216 @@
                     <wrench>0 0 0 0 -0 0</wrench>
                 </link>
             </model>
-            <model name='truss'>
-                <pose frame=''>2.83291 -11.6373 0.576505 -1.57079 -1.22133 2.4426</pose>
-                <scale>1.20175 1.20175 1.20175</scale>
+            <model name='nist_elevated_floor_120'>
+                <pose frame=''>14.811 -11.5727 0.107256 0 -0 0.202425</pose>
+                <scale>1 1 1</scale>
+                <link name='nist_elevated_floor_120'>
+                    <pose frame=''>14.811 -11.5727 0.107256 0 -0 0.202425</pose>
+                    <velocity>0 0 0 0 -0 0</velocity>
+                    <acceleration>0 0 0 0 -0 0</acceleration>
+                    <wrench>0 0 0 0 -0 0</wrench>
+                </link>
+            </model>
+            <model name='nist_maze_wall_240'>
+                <pose frame=''>7.84993 -13.7741 0 0 -0 0</pose>
+                <scale>1 1 1</scale>
+                <link name='nist__maze_wall_240_link'>
+                    <pose frame=''>7.84993 -13.7741 0 0 -0 0</pose>
+                    <velocity>0 0 0 0 -0 0</velocity>
+                    <acceleration>0 0 0 0 -0 0</acceleration>
+                    <wrench>0 0 0 0 -0 0</wrench>
+                </link>
+            </model>
+            <model name='person_standing'>
+                <pose frame=''>9.28672 -0.814012 0.103335 0.001542 -0.011637 1.44192</pose>
+                <scale>1 1 1</scale>
                 <link name='link'>
-                    <pose frame=''>2.83291 -11.6373 0.576505 -1.57079 -1.22133 2.4426</pose>
+                    <pose frame=''>9.28672 -0.814012 0.103335 0.001542 -0.011637 1.44192</pose>
+                    <velocity>0 0 0 0 -0 0</velocity>
+                    <acceleration>-1.32766 -0.160099 -0.252691 0.133552 -1.45029 0.283148</acceleration>
+                    <wrench>-106.213 -12.808 -20.2153 0 -0 0</wrench>
+                </link>
+            </model>
+            <model name='table'>
+                <pose frame=''>4.55685 -12.4222 0 0 -0 0</pose>
+                <scale>1 1 1</scale>
+                <link name='link'>
+                    <pose frame=''>4.55685 -12.4222 0 0 -0 0</pose>
+                    <velocity>0 0 0 0 -0 0</velocity>
+                    <acceleration>0 0 0 0 -0 0</acceleration>
+                    <wrench>0 0 0 0 -0 0</wrench>
+                </link>
+            </model>
+            <model name='textured_shapes'>
+                <pose frame=''>2.18219 -5.89574 0.6 -0 -1e-06 1.2e-05</pose>
+                <scale>1 1 1</scale>
+                <link name='box'>
+                    <pose frame=''>2.18221 -7.39574 0.6 -0 -1e-06 1.2e-05</pose>
+                    <velocity>0 0 0 0 -0 0</velocity>
+                    <acceleration>2.68402 -1.53239 3.64165 -3.13437 -0.904349 0.064583</acceleration>
+                    <wrench>2.68402 -1.53239 3.64165 0 -0 0</wrench>
+                </link>
+                <link name='cylinder'>
+                    <pose frame=''>2.18223 -4.39572 0.599991 1e-06 2e-06 -0.000108</pose>
                     <velocity>0 0 0 0 -0 0</velocity>
                     <acceleration>0 0 -9.8 0 -0 0</acceleration>
-                    <wrench>0 0 -203.161 0 -0 0</wrench>
+                    <wrench>0 0 -9.8 0 -0 0</wrench>
+                </link>
+                <link name='sphere'>
+                    <pose frame=''>2.18221 -5.89574 0.6 0 -0 0</pose>
+                    <velocity>0 0 0 0 -0 0</velocity>
+                    <acceleration>0 0 0 0 -0 0</acceleration>
+                    <wrench>0 0 0 0 -0 0</wrench>
+                </link>
+            </model>
+            <model name='truss'>
+                <pose frame=''>2.84711 -11.6496 0.581392 -1.5708 -1.21527 2.44366</pose>
+                <scale>1.20175 1.20175 1.20175</scale>
+                <link name='link'>
+                    <pose frame=''>2.84711 -11.6496 0.581392 -1.5708 -1.21527 2.44366</pose>
+                    <velocity>0 0 0 0 -0 0</velocity>
+                    <acceleration>-2.21993 2.36808 -2.46459 -1.88544 -0.861855 2.24176</acceleration>
+                    <wrench>-46.0206 49.092 -51.0927 0 -0 0</wrench>
+                </link>
+            </model>
+            <model name='walkway_metal_45'>
+                <pose frame=''>10.6841 -0.052193 -0.04869 0 0 -1.57172</pose>
+                <scale>1 1 1</scale>
+                <link name='link'>
+                    <pose frame=''>10.6841 -0.052193 -0.04869 0 0 -1.57172</pose>
+                    <velocity>0 0 0 0 -0 0</velocity>
+                    <acceleration>0 0 0 0 -0 0</acceleration>
+                    <wrench>0 0 0 0 -0 0</wrench>
+                </link>
+            </model>
+            <model name='walkway_metal_45_0'>
+                <pose frame=''>14.4782 -7.17817 -0.049036 0 -0 3.13787</pose>
+                <scale>1 1 1</scale>
+                <link name='link'>
+                    <pose frame=''>14.4782 -7.17817 -0.049036 0 -0 3.13787</pose>
+                    <velocity>0 0 0 0 -0 0</velocity>
+                    <acceleration>0 0 0 0 -0 0</acceleration>
+                    <wrench>0 0 0 0 -0 0</wrench>
+                </link>
+            </model>
+            <model name='walkway_metal_45_clone'>
+                <pose frame=''>13.9614 -2.56433 -0.04869 0 0 -2.37547</pose>
+                <scale>1 1 1</scale>
+                <link name='link'>
+                    <pose frame=''>13.9614 -2.56433 -0.04869 0 0 -2.37547</pose>
+                    <velocity>0 0 0 0 -0 0</velocity>
+                    <acceleration>0 0 0 0 -0 0</acceleration>
+                    <wrench>0 0 0 0 -0 0</wrench>
+                </link>
+            </model>
+            <model name='walkway_metal_straight'>
+                <pose frame=''>3.18749 -0.070725 -0.04886 0 -0 1.57296</pose>
+                <scale>1 1 1</scale>
+                <link name='link'>
+                    <pose frame=''>3.18749 -0.070725 -0.04886 0 -0 1.57296</pose>
+                    <velocity>0 0 0 0 -0 0</velocity>
+                    <acceleration>0 0 0 0 -0 0</acceleration>
+                    <wrench>0 0 0 0 -0 0</wrench>
+                </link>
+            </model>
+            <model name='walkway_metal_straight_0'>
+                <pose frame=''>14.4763 -5.20864 -0.051663 0 -0 0</pose>
+                <scale>1 1 1</scale>
+                <link name='link'>
+                    <pose frame=''>14.4763 -5.20864 -0.051663 0 -0 0</pose>
+                    <velocity>0 0 0 0 -0 0</velocity>
+                    <acceleration>0 0 0 0 -0 0</acceleration>
+                    <wrench>0 0 0 0 -0 0</wrench>
+                </link>
+            </model>
+            <model name='walkway_metal_straight_0_clone'>
+                <pose frame=''>14.4775 -6.73215 -0.051663 0 -0 0</pose>
+                <scale>1 1 1</scale>
+                <link name='link'>
+                    <pose frame=''>14.4775 -6.73215 -0.051663 0 -0 0</pose>
+                    <velocity>0 0 0 0 -0 0</velocity>
+                    <acceleration>0 0 0 0 -0 0</acceleration>
+                    <wrench>0 0 0 0 -0 0</wrench>
+                </link>
+            </model>
+            <model name='walkway_metal_straight_0_clone_clone'>
+                <pose frame=''>14.4771 -8.25077 -0.051663 0 -0 0</pose>
+                <scale>1 1 1</scale>
+                <link name='link'>
+                    <pose frame=''>14.4771 -8.25077 -0.051663 0 -0 0</pose>
+                    <velocity>0 0 0 0 -0 0</velocity>
+                    <acceleration>0 0 0 0 -0 0</acceleration>
+                    <wrench>0 0 0 0 -0 0</wrench>
+                </link>
+            </model>
+            <model name='walkway_metal_straight_clone'>
+                <pose frame=''>4.71467 -0.065209 -0.04886 0 -0 1.57296</pose>
+                <scale>1 1 1</scale>
+                <link name='link'>
+                    <pose frame=''>4.71467 -0.065209 -0.04886 0 -0 1.57296</pose>
+                    <velocity>0 0 0 0 -0 0</velocity>
+                    <acceleration>0 0 0 0 -0 0</acceleration>
+                    <wrench>0 0 0 0 -0 0</wrench>
+                </link>
+            </model>
+            <model name='walkway_metal_straight_clone_0'>
+                <pose frame=''>6.23578 -0.062676 -0.04886 0 -0 1.57296</pose>
+                <scale>1 1 1</scale>
+                <link name='link'>
+                    <pose frame=''>6.23578 -0.062676 -0.04886 0 -0 1.57296</pose>
+                    <velocity>0 0 0 0 -0 0</velocity>
+                    <acceleration>0 0 0 0 -0 0</acceleration>
+                    <wrench>0 0 0 0 -0 0</wrench>
+                </link>
+            </model>
+            <model name='walkway_metal_straight_clone_1'>
+                <pose frame=''>7.75204 -0.060163 -0.04886 0 -0 1.57296</pose>
+                <scale>1 1 1</scale>
+                <link name='link'>
+                    <pose frame=''>7.75204 -0.060163 -0.04886 0 -0 1.57296</pose>
+                    <velocity>0 0 0 0 -0 0</velocity>
+                    <acceleration>0 0 0 0 -0 0</acceleration>
+                    <wrench>0 0 0 0 -0 0</wrench>
+                </link>
+            </model>
+            <model name='walkway_metal_straight_clone_1_clone'>
+                <pose frame=''>9.27509 -0.052705 -0.04886 0 -0 1.57296</pose>
+                <scale>1 1 1</scale>
+                <link name='link'>
+                    <pose frame=''>9.27509 -0.052705 -0.04886 0 -0 1.57296</pose>
+                    <velocity>0 0 0 0 -0 0</velocity>
+                    <acceleration>0 0 0 0 -0 0</acceleration>
+                    <wrench>0 0 0 0 -0 0</wrench>
+                </link>
+            </model>
+            <model name='walkway_metal_straight_clone_1_clone_0'>
+                <pose frame=''>10.7789 -0.052396 -0.04886 0 -0 1.57296</pose>
+                <scale>1 1 1</scale>
+                <link name='link'>
+                    <pose frame=''>10.7789 -0.052396 -0.04886 0 -0 1.57296</pose>
+                    <velocity>0 0 0 0 -0 0</velocity>
+                    <acceleration>0 0 0 0 -0 0</acceleration>
+                    <wrench>0 0 0 0 -0 0</wrench>
+                </link>
+            </model>
+            <model name='walkway_metal_straight_clone_1_clone_0_clone'>
+                <pose frame=''>13.0185 -1.63883 -0.04886 0 -0 0.787536</pose>
+                <scale>1 1 1</scale>
+                <link name='link'>
+                    <pose frame=''>13.0185 -1.63883 -0.04886 0 -0 0.787536</pose>
+                    <velocity>0 0 0 0 -0 0</velocity>
+                    <acceleration>0 0 0 0 -0 0</acceleration>
+                    <wrench>0 0 0 0 -0 0</wrench>
+                </link>
+            </model>
+            <model name='walkway_metal_straight_clone_1_clone_0_clone_clone'>
+                <pose frame=''>14.0953 -2.71912 -0.04886 0 -0 0.783925</pose>
+                <scale>1 1 1</scale>
+                <link name='link'>
+                    <pose frame=''>14.0953 -2.71912 -0.04886 0 -0 0.783925</pose>
+                    <velocity>0 0 0 0 -0 0</velocity>
+                    <acceleration>0 0 0 0 -0 0</acceleration>
+                    <wrench>0 0 0 0 -0 0</wrench>
                 </link>
             </model>
             <light name='directional_light'>
@@ -266,7 +508,7 @@
         </state>
         <gui fullscreen='0'>
             <camera name='user_camera'>
-                <pose frame=''>-6.69444 -6.99284 25.2669 0 0.869796 0.025587</pose>
+                <pose frame=''>12.2692 4.35954 28.9022 -2.5e-05 1.5698 -1.70002</pose>
                 <view_controller>orbit</view_controller>
                 <projection_type>perspective</projection_type>
             </camera>
@@ -1075,6 +1317,1675 @@
                 <kinematic>0</kinematic>
             </link>
             <pose frame=''>2.89322 -11.5609 0 0 -0 0</pose>
+        </model>
+        <model name='bookshelf'>
+            <static>1</static>
+            <link name='link'>
+                <inertial>
+                    <mass>1</mass>
+                </inertial>
+                <collision name='back'>
+                    <pose frame=''>0 0.005 0.6 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>0.9 0.01 1.2</size>
+                        </box>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <visual name='visual1'>
+                    <pose frame=''>0 0.005 0.6 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>0.9 0.01 1.2</size>
+                        </box>
+                    </geometry>
+                    <material>
+                        <script>
+                            <uri>file://media/materials/scripts/gazebo.material</uri>
+                            <name>Gazebo/Wood</name>
+                        </script>
+                    </material>
+                </visual>
+                <collision name='left_side'>
+                    <pose frame=''>0.45 -0.195 0.6 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>0.02 0.4 1.2</size>
+                        </box>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <visual name='visual2'>
+                    <pose frame=''>0.45 -0.195 0.6 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>0.02 0.4 1.2</size>
+                        </box>
+                    </geometry>
+                    <material>
+                        <script>
+                            <uri>file://media/materials/scripts/gazebo.material</uri>
+                            <name>Gazebo/Wood</name>
+                        </script>
+                    </material>
+                </visual>
+                <collision name='right_side'>
+                    <pose frame=''>-0.45 -0.195 0.6 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>0.02 0.4 1.2</size>
+                        </box>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <visual name='visual3'>
+                    <pose frame=''>-0.45 -0.195 0.6 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>0.02 0.4 1.2</size>
+                        </box>
+                    </geometry>
+                    <material>
+                        <script>
+                            <uri>file://media/materials/scripts/gazebo.material</uri>
+                            <name>Gazebo/Wood</name>
+                        </script>
+                    </material>
+                </visual>
+                <collision name='bottom'>
+                    <pose frame=''>0 -0.195 0.03 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>0.88 0.4 0.06</size>
+                        </box>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <visual name='visual4'>
+                    <pose frame=''>0 -0.195 0.03 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>0.88 0.4 0.06</size>
+                        </box>
+                    </geometry>
+                    <material>
+                        <script>
+                            <uri>file://media/materials/scripts/gazebo.material</uri>
+                            <name>Gazebo/Wood</name>
+                        </script>
+                    </material>
+                </visual>
+                <collision name='top'>
+                    <pose frame=''>0 -0.195 1.19 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>0.88 0.4 0.02</size>
+                        </box>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <visual name='visual5'>
+                    <pose frame=''>0 -0.195 1.19 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>0.88 0.4 0.02</size>
+                        </box>
+                    </geometry>
+                    <material>
+                        <script>
+                            <uri>file://media/materials/scripts/gazebo.material</uri>
+                            <name>Gazebo/Wood</name>
+                        </script>
+                    </material>
+                </visual>
+                <collision name='low_shelf'>
+                    <pose frame=''>0 -0.195 0.43 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>0.88 0.4 0.02</size>
+                        </box>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <visual name='visual6'>
+                    <pose frame=''>0 -0.195 0.43 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>0.88 0.4 0.02</size>
+                        </box>
+                    </geometry>
+                    <material>
+                        <script>
+                            <uri>file://media/materials/scripts/gazebo.material</uri>
+                            <name>Gazebo/Wood</name>
+                        </script>
+                    </material>
+                </visual>
+                <collision name='high_shelf'>
+                    <pose frame=''>0 -0.195 0.8 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>0.88 0.4 0.02</size>
+                        </box>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <visual name='visual7'>
+                    <pose frame=''>0 -0.195 0.8 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>0.88 0.4 0.02</size>
+                        </box>
+                    </geometry>
+                    <material>
+                        <script>
+                            <uri>file://media/materials/scripts/gazebo.material</uri>
+                            <name>Gazebo/Wood</name>
+                        </script>
+                    </material>
+                </visual>
+                <self_collide>0</self_collide>
+                <kinematic>0</kinematic>
+            </link>
+            <pose frame=''>16.1468 -3.37556 0 0 -0 0</pose>
+        </model>
+        <model name='cabinet'>
+            <static>1</static>
+            <link name='cabinet_bottom_plate'>
+                <inertial>
+                    <pose frame=''>0 0 -1 0 -0 0</pose>
+                    <inertia>
+                        <ixx>2.05</ixx>
+                        <ixy>0</ixy>
+                        <ixz>0</ixz>
+                        <iyy>2.05</iyy>
+                        <iyz>0</iyz>
+                        <izz>2.05</izz>
+                    </inertia>
+                    <mass>25</mass>
+                </inertial>
+                <collision name='cabinet_bottom_plate_geom'>
+                    <pose frame=''>0 0 0.01 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>0.45 0.45 0.02</size>
+                        </box>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <visual name='cabinet_bottom_plate_geom_visual'>
+                    <pose frame=''>0 0 0.01 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>0.45 0.45 0.02</size>
+                        </box>
+                    </geometry>
+                    <material>
+                        <script>
+                            <uri>file://media/materials/scripts/gazebo.material</uri>
+                            <name>Gazebo/Wood</name>
+                        </script>
+                    </material>
+                </visual>
+                <collision name='cabinet_bottom_plate_geom_cabinet_back_plate'>
+                    <pose frame=''>0.235 0 0.51 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>0.02 0.45 1.02</size>
+                        </box>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <visual name='cabinet_bottom_plate_geom_cabinet_back_plate_visual'>
+                    <pose frame=''>0.235 0 0.51 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>0.02 0.45 1.02</size>
+                        </box>
+                    </geometry>
+                    <material>
+                        <script>
+                            <uri>file://media/materials/scripts/gazebo.material</uri>
+                            <name>Gazebo/Wood</name>
+                        </script>
+                    </material>
+                </visual>
+                <collision name='cabinet_bottom_plate_geom_cabinet_left_plate'>
+                    <pose frame=''>0 0.235 0.51 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>0.45 0.02 1.02</size>
+                        </box>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <visual name='cabinet_bottom_plate_geom_cabinet_left_plate_visual'>
+                    <pose frame=''>0 0.235 0.51 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>0.45 0.02 1.02</size>
+                        </box>
+                    </geometry>
+                    <material>
+                        <script>
+                            <uri>file://media/materials/scripts/gazebo.material</uri>
+                            <name>Gazebo/Wood</name>
+                        </script>
+                    </material>
+                </visual>
+                <collision name='cabinet_bottom_plate_geom_cabinet_middle_plate'>
+                    <pose frame=''>0 0 0.51 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>0.45 0.45 0.02</size>
+                        </box>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <visual name='cabinet_bottom_plate_geom_cabinet_middle_plate_visual'>
+                    <pose frame=''>0 0 0.51 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>0.45 0.45 0.02</size>
+                        </box>
+                    </geometry>
+                    <material>
+                        <script>
+                            <uri>file://media/materials/scripts/gazebo.material</uri>
+                            <name>Gazebo/Wood</name>
+                        </script>
+                    </material>
+                </visual>
+                <collision name='cabinet_bottom_plate_geom_cabinet_right_plate'>
+                    <pose frame=''>0 -0.235 0.51 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>0.45 0.02 1.02</size>
+                        </box>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <visual name='cabinet_bottom_plate_geom_cabinet_right_plate_visual'>
+                    <pose frame=''>0 -0.235 0.51 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>0.45 0.02 1.02</size>
+                        </box>
+                    </geometry>
+                    <material>
+                        <script>
+                            <uri>file://media/materials/scripts/gazebo.material</uri>
+                            <name>Gazebo/Wood</name>
+                        </script>
+                    </material>
+                </visual>
+                <collision name='cabinet_bottom_plate_geom_cabinet_top_plate'>
+                    <pose frame=''>0 0 1.01 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>0.45 0.45 0.02</size>
+                        </box>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <visual name='cabinet_bottom_plate_geom_cabinet_top_plate_visual'>
+                    <pose frame=''>0 0 1.01 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>0.45 0.45 0.02</size>
+                        </box>
+                    </geometry>
+                    <material>
+                        <script>
+                            <uri>file://media/materials/scripts/gazebo.material</uri>
+                            <name>Gazebo/Wood</name>
+                        </script>
+                    </material>
+                </visual>
+                <self_collide>0</self_collide>
+                <kinematic>0</kinematic>
+            </link>
+            <pose frame=''>16.1191 -2.77936 0 0 -0 0</pose>
+        </model>
+        <model name='cardboard_box'>
+            <pose frame=''>16.0161 -2.82349 0.15 0 -0 0</pose>
+            <link name='link'>
+                <inertial>
+                    <mass>2</mass>
+                    <inertia>
+                        <ixx>0.0416667</ixx>
+                        <ixy>0</ixy>
+                        <ixz>0</ixz>
+                        <iyy>0.0566667</iyy>
+                        <iyz>0</iyz>
+                        <izz>0.0683333</izz>
+                    </inertia>
+                </inertial>
+                <collision name='collision'>
+                    <geometry>
+                        <box>
+                            <size>0.5 0.4 0.3</size>
+                        </box>
+                    </geometry>
+                    <surface>
+                        <friction>
+                            <ode>
+                                <mu>1</mu>
+                                <mu2>1</mu2>
+                            </ode>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                        </friction>
+                        <contact>
+                            <ode>
+                                <kp>1e+07</kp>
+                                <kd>1</kd>
+                                <min_depth>0.001</min_depth>
+                                <max_vel>0.1</max_vel>
+                            </ode>
+                        </contact>
+                        <bounce/>
+                    </surface>
+                    <max_contacts>10</max_contacts>
+                </collision>
+                <visual name='visual'>
+                    <pose frame=''>0 0 -0.15 0 -0 0</pose>
+                    <geometry>
+                        <mesh>
+                            <uri>model://cardboard_box/meshes/cardboard_box.dae</uri>
+                            <scale>1.25932 1.00745 0.755591</scale>
+                        </mesh>
+                    </geometry>
+                </visual>
+                <self_collide>0</self_collide>
+                <kinematic>0</kinematic>
+            </link>
+        </model>
+        <model name='Dumpster'>
+            <link name='link'>
+                <collision name='collision'>
+                    <geometry>
+                        <mesh>
+                            <scale>1.5 1.5 1.5</scale>
+                            <uri>model://dumpster/meshes/dumpster.dae</uri>
+                        </mesh>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <visual name='visual'>
+                    <geometry>
+                        <mesh>
+                            <scale>1.5 1.5 1.5</scale>
+                            <uri>model://dumpster/meshes/dumpster.dae</uri>
+                        </mesh>
+                    </geometry>
+                    <material>
+                        <script>
+                            <uri>model://dumpster/materials/scripts</uri>
+                            <uri>model://dumpster/materials/textures</uri>
+                            <name>Dumpster/Diffuse</name>
+                        </script>
+                    </material>
+                </visual>
+                <self_collide>0</self_collide>
+                <inertial>
+                    <inertia>
+                        <ixx>1</ixx>
+                        <ixy>0</ixy>
+                        <ixz>0</ixz>
+                        <iyy>1</iyy>
+                        <iyz>0</iyz>
+                        <izz>1</izz>
+                    </inertia>
+                    <mass>1</mass>
+                </inertial>
+                <kinematic>0</kinematic>
+            </link>
+            <pose frame=''>15.081 1.0791 0 0 -0 0</pose>
+        </model>
+        <model name='nist_maze_wall_240'>
+            <static>1</static>
+            <link name='nist__maze_wall_240_link'>
+                <pose frame=''>0 0 0 0 -0 0</pose>
+                <collision name='collision'>
+                    <geometry>
+                        <mesh>
+                            <uri>model://nist_maze_wall_240/meshes/nist_maze_wall_240.dae</uri>
+                            <scale>1 1 1</scale>
+                        </mesh>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <visual name='visual'>
+                    <geometry>
+                        <mesh>
+                            <uri>model://nist_maze_wall_240/meshes/nist_maze_wall_240.dae</uri>
+                            <scale>1 1 1</scale>
+                        </mesh>
+                    </geometry>
+                </visual>
+                <self_collide>0</self_collide>
+                <kinematic>0</kinematic>
+            </link>
+            <pose frame=''>7.84993 -13.7741 0 0 -0 0</pose>
+        </model>
+        <model name='nist_elevated_floor_120'>
+            <static>1</static>
+            <link name='nist_elevated_floor_120'>
+                <pose frame=''>0 0 0 0 -0 0</pose>
+                <collision name='collision'>
+                    <geometry>
+                        <mesh>
+                            <uri>model://nist_elevated_floor_120/meshes/nist_elevated_floor_120.dae</uri>
+                            <scale>1 1 1</scale>
+                        </mesh>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <visual name='visual'>
+                    <geometry>
+                        <mesh>
+                            <uri>model://nist_elevated_floor_120/meshes/nist_elevated_floor_120.dae</uri>
+                            <scale>1 1 1</scale>
+                        </mesh>
+                    </geometry>
+                </visual>
+                <self_collide>0</self_collide>
+                <kinematic>0</kinematic>
+            </link>
+            <pose frame=''>14.811 -11.5727 0 0 -0 0</pose>
+        </model>
+        <model name='person_standing'>
+            <link name='link'>
+                <inertial>
+                    <pose frame=''>0 -0.1 0.95 0 -0 0</pose>
+                    <mass>80</mass>
+                    <inertia>
+                        <ixx>24.88</ixx>
+                        <ixy>0</ixy>
+                        <ixz>0</ixz>
+                        <iyy>25.73</iyy>
+                        <iyz>0</iyz>
+                        <izz>2.48</izz>
+                    </inertia>
+                </inertial>
+                <collision name='bottom'>
+                    <pose frame=''>0 -0.1 0.01 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>0.5 0.35 0.02</size>
+                        </box>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <collision name='person'>
+                    <pose frame=''>0 0 0.02 0.04 -0 0</pose>
+                    <geometry>
+                        <mesh>
+                            <uri>model://person_standing/meshes/standing.dae</uri>
+                        </mesh>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <visual name='visual'>
+                    <pose frame=''>0 0 0.02 0.04 -0 0</pose>
+                    <geometry>
+                        <mesh>
+                            <uri>model://person_standing/meshes/standing.dae</uri>
+                        </mesh>
+                    </geometry>
+                </visual>
+                <self_collide>0</self_collide>
+                <kinematic>0</kinematic>
+            </link>
+            <pose frame=''>9.28672 -0.813732 0 0 -0 0</pose>
+        </model>
+        <model name='textured_shapes'>
+            <pose frame=''>2.18221 -5.89574 0.5 0 -0 0</pose>
+            <link name='box'>
+                <pose frame=''>0 -1.5 0 0 -0 0</pose>
+                <collision name='collision'>
+                    <geometry>
+                        <box>
+                            <size>1 1 1</size>
+                        </box>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <visual name='visual'>
+                    <geometry>
+                        <box>
+                            <size>1 1 1</size>
+                        </box>
+                    </geometry>
+                    <material>
+                        <script>
+                            <uri>model://textured_shapes/materials/scripts</uri>
+                            <uri>model://textured_shapes/materials/textures</uri>
+                            <name>TexturedShape/Squares</name>
+                        </script>
+                    </material>
+                </visual>
+                <self_collide>0</self_collide>
+                <inertial>
+                    <inertia>
+                        <ixx>1</ixx>
+                        <ixy>0</ixy>
+                        <ixz>0</ixz>
+                        <iyy>1</iyy>
+                        <iyz>0</iyz>
+                        <izz>1</izz>
+                    </inertia>
+                    <mass>1</mass>
+                </inertial>
+                <kinematic>0</kinematic>
+            </link>
+            <link name='sphere'>
+                <collision name='collision'>
+                    <geometry>
+                        <sphere>
+                            <radius>0.5</radius>
+                        </sphere>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <visual name='visual'>
+                    <geometry>
+                        <sphere>
+                            <radius>0.5</radius>
+                        </sphere>
+                    </geometry>
+                    <material>
+                        <script>
+                            <uri>model://textured_shapes/materials/scripts</uri>
+                            <uri>model://textured_shapes/materials/textures</uri>
+                            <name>TexturedShape/Squares</name>
+                        </script>
+                    </material>
+                </visual>
+                <self_collide>0</self_collide>
+                <inertial>
+                    <inertia>
+                        <ixx>1</ixx>
+                        <ixy>0</ixy>
+                        <ixz>0</ixz>
+                        <iyy>1</iyy>
+                        <iyz>0</iyz>
+                        <izz>1</izz>
+                    </inertia>
+                    <mass>1</mass>
+                </inertial>
+                <kinematic>0</kinematic>
+            </link>
+            <link name='cylinder'>
+                <pose frame=''>0 1.5 0 0 -0 0</pose>
+                <collision name='collision'>
+                    <geometry>
+                        <cylinder>
+                            <radius>0.5</radius>
+                            <length>1</length>
+                        </cylinder>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <visual name='visual'>
+                    <geometry>
+                        <cylinder>
+                            <radius>0.5</radius>
+                            <length>1</length>
+                        </cylinder>
+                    </geometry>
+                    <material>
+                        <script>
+                            <uri>model://textured_shapes/materials/scripts</uri>
+                            <uri>model://textured_shapes/materials/textures</uri>
+                            <name>TexturedShape/Squares</name>
+                        </script>
+                    </material>
+                </visual>
+                <self_collide>0</self_collide>
+                <inertial>
+                    <inertia>
+                        <ixx>1</ixx>
+                        <ixy>0</ixy>
+                        <ixz>0</ixz>
+                        <iyy>1</iyy>
+                        <iyz>0</iyz>
+                        <izz>1</izz>
+                    </inertia>
+                    <mass>1</mass>
+                </inertial>
+                <kinematic>0</kinematic>
+            </link>
+        </model>
+        <model name='table'>
+            <static>1</static>
+            <link name='link'>
+                <collision name='surface'>
+                    <pose frame=''>0 0 1 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>1.5 0.8 0.03</size>
+                        </box>
+                    </geometry>
+                    <surface>
+                        <friction>
+                            <ode>
+                                <mu>0.6</mu>
+                                <mu2>0.6</mu2>
+                            </ode>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                        </friction>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                    </surface>
+                    <max_contacts>10</max_contacts>
+                </collision>
+                <visual name='visual1'>
+                    <pose frame=''>0 0 1 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>1.5 0.8 0.03</size>
+                        </box>
+                    </geometry>
+                    <material>
+                        <script>
+                            <uri>file://media/materials/scripts/gazebo.material</uri>
+                            <name>Gazebo/Wood</name>
+                        </script>
+                    </material>
+                </visual>
+                <collision name='front_left_leg'>
+                    <pose frame=''>0.68 0.38 0.5 0 -0 0</pose>
+                    <geometry>
+                        <cylinder>
+                            <radius>0.02</radius>
+                            <length>1</length>
+                        </cylinder>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <visual name='front_left_leg'>
+                    <pose frame=''>0.68 0.38 0.5 0 -0 0</pose>
+                    <geometry>
+                        <cylinder>
+                            <radius>0.02</radius>
+                            <length>1</length>
+                        </cylinder>
+                    </geometry>
+                    <material>
+                        <script>
+                            <uri>file://media/materials/scripts/gazebo.material</uri>
+                            <name>Gazebo/Grey</name>
+                        </script>
+                    </material>
+                </visual>
+                <collision name='front_right_leg'>
+                    <pose frame=''>0.68 -0.38 0.5 0 -0 0</pose>
+                    <geometry>
+                        <cylinder>
+                            <radius>0.02</radius>
+                            <length>1</length>
+                        </cylinder>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <visual name='front_right_leg'>
+                    <pose frame=''>0.68 -0.38 0.5 0 -0 0</pose>
+                    <geometry>
+                        <cylinder>
+                            <radius>0.02</radius>
+                            <length>1</length>
+                        </cylinder>
+                    </geometry>
+                    <material>
+                        <script>
+                            <uri>file://media/materials/scripts/gazebo.material</uri>
+                            <name>Gazebo/Grey</name>
+                        </script>
+                    </material>
+                </visual>
+                <collision name='back_right_leg'>
+                    <pose frame=''>-0.68 -0.38 0.5 0 -0 0</pose>
+                    <geometry>
+                        <cylinder>
+                            <radius>0.02</radius>
+                            <length>1</length>
+                        </cylinder>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <visual name='back_right_leg'>
+                    <pose frame=''>-0.68 -0.38 0.5 0 -0 0</pose>
+                    <geometry>
+                        <cylinder>
+                            <radius>0.02</radius>
+                            <length>1</length>
+                        </cylinder>
+                    </geometry>
+                    <material>
+                        <script>
+                            <uri>file://media/materials/scripts/gazebo.material</uri>
+                            <name>Gazebo/Grey</name>
+                        </script>
+                    </material>
+                </visual>
+                <collision name='back_left_leg'>
+                    <pose frame=''>-0.68 0.38 0.5 0 -0 0</pose>
+                    <geometry>
+                        <cylinder>
+                            <radius>0.02</radius>
+                            <length>1</length>
+                        </cylinder>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <visual name='back_left_leg'>
+                    <pose frame=''>-0.68 0.38 0.5 0 -0 0</pose>
+                    <geometry>
+                        <cylinder>
+                            <radius>0.02</radius>
+                            <length>1</length>
+                        </cylinder>
+                    </geometry>
+                    <material>
+                        <script>
+                            <uri>file://media/materials/scripts/gazebo.material</uri>
+                            <name>Gazebo/Grey</name>
+                        </script>
+                    </material>
+                </visual>
+                <self_collide>0</self_collide>
+                <kinematic>0</kinematic>
+            </link>
+            <pose frame=''>4.55685 -12.4222 0 0 -0 0</pose>
+        </model>
+        <model name='walkway_metal_straight'>
+            <static>1</static>
+            <link name='link'>
+                <collision name='collision'>
+                    <pose frame=''>0 0.762 0.076075 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>1.524 1.524 0.15215</size>
+                        </box>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <visual name='visual'>
+                    <geometry>
+                        <mesh>
+                            <scale>0.001 0.001 0.001</scale>
+                            <uri>model://walkway_metal_straight/meshes/mesh.obj</uri>
+                        </mesh>
+                    </geometry>
+                </visual>
+                <self_collide>0</self_collide>
+                <kinematic>0</kinematic>
+            </link>
+            <pose frame=''>3.18878 -0.667325 0 0 -0 0</pose>
+        </model>
+        <model name='walkway_metal_straight_clone'>
+            <static>1</static>
+            <link name='link'>
+                <collision name='collision'>
+                    <pose frame=''>0 0.762 0.076075 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>1.524 1.524 0.15215</size>
+                        </box>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <visual name='visual'>
+                    <geometry>
+                        <mesh>
+                            <scale>0.001 0.001 0.001</scale>
+                            <uri>model://walkway_metal_straight/meshes/mesh.obj</uri>
+                        </mesh>
+                    </geometry>
+                </visual>
+                <self_collide>0</self_collide>
+                <kinematic>0</kinematic>
+            </link>
+            <pose frame=''>4.71467 -0.065209 -0.04886 0 -0 1.57296</pose>
+        </model>
+        <model name='walkway_metal_straight_clone_0'>
+            <static>1</static>
+            <link name='link'>
+                <collision name='collision'>
+                    <pose frame=''>0 0.762 0.076075 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>1.524 1.524 0.15215</size>
+                        </box>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <visual name='visual'>
+                    <geometry>
+                        <mesh>
+                            <scale>0.001 0.001 0.001</scale>
+                            <uri>model://walkway_metal_straight/meshes/mesh.obj</uri>
+                        </mesh>
+                    </geometry>
+                </visual>
+                <self_collide>0</self_collide>
+                <kinematic>0</kinematic>
+            </link>
+            <pose frame=''>6.23578 -0.062676 -0.04886 0 -0 1.57296</pose>
+        </model>
+        <model name='walkway_metal_straight_clone_1'>
+            <static>1</static>
+            <link name='link'>
+                <collision name='collision'>
+                    <pose frame=''>0 0.762 0.076075 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>1.524 1.524 0.15215</size>
+                        </box>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <visual name='visual'>
+                    <geometry>
+                        <mesh>
+                            <scale>0.001 0.001 0.001</scale>
+                            <uri>model://walkway_metal_straight/meshes/mesh.obj</uri>
+                        </mesh>
+                    </geometry>
+                </visual>
+                <self_collide>0</self_collide>
+                <kinematic>0</kinematic>
+            </link>
+            <pose frame=''>7.75204 -0.060163 -0.04886 0 -0 1.57296</pose>
+        </model>
+        <model name='walkway_metal_straight_clone_1_clone'>
+            <static>1</static>
+            <link name='link'>
+                <collision name='collision'>
+                    <pose frame=''>0 0.762 0.076075 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>1.524 1.524 0.15215</size>
+                        </box>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <visual name='visual'>
+                    <geometry>
+                        <mesh>
+                            <scale>0.001 0.001 0.001</scale>
+                            <uri>model://walkway_metal_straight/meshes/mesh.obj</uri>
+                        </mesh>
+                    </geometry>
+                </visual>
+                <self_collide>0</self_collide>
+                <kinematic>0</kinematic>
+            </link>
+            <pose frame=''>9.28654 -0.05268 -0.04886 0 -0 1.57296</pose>
+        </model>
+        <model name='walkway_metal_straight_clone_1_clone_0'>
+            <static>1</static>
+            <link name='link'>
+                <collision name='collision'>
+                    <pose frame=''>0 0.762 0.076075 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>1.524 1.524 0.15215</size>
+                        </box>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <visual name='visual'>
+                    <geometry>
+                        <mesh>
+                            <scale>0.001 0.001 0.001</scale>
+                            <uri>model://walkway_metal_straight/meshes/mesh.obj</uri>
+                        </mesh>
+                    </geometry>
+                </visual>
+                <self_collide>0</self_collide>
+                <kinematic>0</kinematic>
+            </link>
+            <pose frame=''>10.7789 -0.052396 -0.04886 0 -0 1.57296</pose>
+        </model>
+        <model name='walkway_metal_45'>
+            <static>1</static>
+            <link name='link'>
+                <collision name='collision'>
+                    <pose frame=''>0 0.538815 0.076075 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>1.524 1.07763 0.15215</size>
+                        </box>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <collision name='collision2'>
+                    <pose frame=''>0.15793 0.92 0.076075 0 0 -0.785398</pose>
+                    <geometry>
+                        <box>
+                            <size>1.524 1.07763 0.15215</size>
+                        </box>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <visual name='visual'>
+                    <geometry>
+                        <mesh>
+                            <scale>0.001 0.001 0.001</scale>
+                            <uri>model://walkway_metal_45/meshes/mesh.obj</uri>
+                        </mesh>
+                    </geometry>
+                </visual>
+                <self_collide>0</self_collide>
+                <kinematic>0</kinematic>
+            </link>
+            <pose frame=''>13.0098 0.739247 0 0 -0 0</pose>
+        </model>
+        <model name='walkway_metal_straight_clone_1_clone_0_clone'>
+            <static>1</static>
+            <link name='link'>
+                <collision name='collision'>
+                    <pose frame=''>0 0.762 0.076075 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>1.524 1.524 0.15215</size>
+                        </box>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <visual name='visual'>
+                    <geometry>
+                        <mesh>
+                            <scale>0.001 0.001 0.001</scale>
+                            <uri>model://walkway_metal_straight/meshes/mesh.obj</uri>
+                        </mesh>
+                    </geometry>
+                </visual>
+                <self_collide>0</self_collide>
+                <kinematic>0</kinematic>
+            </link>
+            <pose frame=''>12.8759 -1.57888 -0.04886 0 -0 1.57296</pose>
+        </model>
+        <model name='walkway_metal_straight_clone_1_clone_0_clone_clone'>
+            <static>1</static>
+            <link name='link'>
+                <collision name='collision'>
+                    <pose frame=''>0 0.762 0.076075 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>1.524 1.524 0.15215</size>
+                        </box>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <visual name='visual'>
+                    <geometry>
+                        <mesh>
+                            <scale>0.001 0.001 0.001</scale>
+                            <uri>model://walkway_metal_straight/meshes/mesh.obj</uri>
+                        </mesh>
+                    </geometry>
+                </visual>
+                <self_collide>0</self_collide>
+                <kinematic>0</kinematic>
+            </link>
+            <pose frame=''>14.0953 -2.71912 -0.04886 0 -0 0.783925</pose>
+        </model>
+        <model name='walkway_metal_45_clone'>
+            <static>1</static>
+            <link name='link'>
+                <collision name='collision'>
+                    <pose frame=''>0 0.538815 0.076075 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>1.524 1.07763 0.15215</size>
+                        </box>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <collision name='collision2'>
+                    <pose frame=''>0.15793 0.92 0.076075 0 0 -0.785398</pose>
+                    <geometry>
+                        <box>
+                            <size>1.524 1.07763 0.15215</size>
+                        </box>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <visual name='visual'>
+                    <geometry>
+                        <mesh>
+                            <scale>0.001 0.001 0.001</scale>
+                            <uri>model://walkway_metal_45/meshes/mesh.obj</uri>
+                        </mesh>
+                    </geometry>
+                </visual>
+                <self_collide>0</self_collide>
+                <kinematic>0</kinematic>
+            </link>
+            <pose frame=''>13.409 -3.6308 -0.04869 0 0 -1.57172</pose>
+        </model>
+        <model name='walkway_metal_straight_0'>
+            <static>1</static>
+            <link name='link'>
+                <collision name='collision'>
+                    <pose frame=''>0 0.762 0.076075 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>1.524 1.524 0.15215</size>
+                        </box>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <visual name='visual'>
+                    <geometry>
+                        <mesh>
+                            <scale>0.001 0.001 0.001</scale>
+                            <uri>model://walkway_metal_straight/meshes/mesh.obj</uri>
+                        </mesh>
+                    </geometry>
+                </visual>
+                <self_collide>0</self_collide>
+                <kinematic>0</kinematic>
+            </link>
+            <pose frame=''>14.4729 -5.20864 0 0 -0 0</pose>
+        </model>
+        <model name='walkway_metal_straight_0_clone'>
+            <static>1</static>
+            <link name='link'>
+                <collision name='collision'>
+                    <pose frame=''>0 0.762 0.076075 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>1.524 1.524 0.15215</size>
+                        </box>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <visual name='visual'>
+                    <geometry>
+                        <mesh>
+                            <scale>0.001 0.001 0.001</scale>
+                            <uri>model://walkway_metal_straight/meshes/mesh.obj</uri>
+                        </mesh>
+                    </geometry>
+                </visual>
+                <self_collide>0</self_collide>
+                <kinematic>0</kinematic>
+            </link>
+            <pose frame=''>14.4801 -6.73215 -0.051663 0 -0 0</pose>
+        </model>
+        <model name='walkway_metal_straight_0_clone_clone'>
+            <static>1</static>
+            <link name='link'>
+                <collision name='collision'>
+                    <pose frame=''>0 0.762 0.076075 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>1.524 1.524 0.15215</size>
+                        </box>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <visual name='visual'>
+                    <geometry>
+                        <mesh>
+                            <scale>0.001 0.001 0.001</scale>
+                            <uri>model://walkway_metal_straight/meshes/mesh.obj</uri>
+                        </mesh>
+                    </geometry>
+                </visual>
+                <self_collide>0</self_collide>
+                <kinematic>0</kinematic>
+            </link>
+            <pose frame=''>14.4696 -8.24271 -0.051663 0 -0 0</pose>
+        </model>
+        <model name='walkway_metal_45_0'>
+            <static>1</static>
+            <link name='link'>
+                <collision name='collision'>
+                    <pose frame=''>0 0.538815 0.076075 0 -0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>1.524 1.07763 0.15215</size>
+                        </box>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <collision name='collision2'>
+                    <pose frame=''>0.15793 0.92 0.076075 0 0 -0.785398</pose>
+                    <geometry>
+                        <box>
+                            <size>1.524 1.07763 0.15215</size>
+                        </box>
+                    </geometry>
+                    <max_contacts>10</max_contacts>
+                    <surface>
+                        <contact>
+                            <ode/>
+                        </contact>
+                        <bounce/>
+                        <friction>
+                            <torsional>
+                                <ode/>
+                            </torsional>
+                            <ode/>
+                        </friction>
+                    </surface>
+                </collision>
+                <visual name='visual'>
+                    <geometry>
+                        <mesh>
+                            <scale>0.001 0.001 0.001</scale>
+                            <uri>model://walkway_metal_45/meshes/mesh.obj</uri>
+                        </mesh>
+                    </geometry>
+                </visual>
+                <self_collide>0</self_collide>
+                <kinematic>0</kinematic>
+            </link>
+            <pose frame=''>13.2571 -10.07 0 0 -0 0</pose>
         </model>
     </world>
 </sdf>
