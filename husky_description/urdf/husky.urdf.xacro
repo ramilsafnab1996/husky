@@ -203,7 +203,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 
     <!--  Left front camera  -->
     <joint name="left_camera_joint" type="fixed">
-        <origin xyz="${base_x_size/4} ${base_y_size/4} 0.1"/>
+        <origin xyz="${base_x_size/4} ${base_y_size/4} 0.1" rpy="0 0 0"/>
         <parent link="top_plate_link"/>
         <child link="left_camera_frame"/>
     </joint>
@@ -232,7 +232,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 
     <!-- Right front camera -->
     <joint name="right_camera_joint" type="fixed">
-        <origin xyz="${base_x_size/4} -${base_y_size/4} 0.1"/>
+        <origin xyz="${base_x_size/4} -${base_y_size/4} 0.1" rpy="0 0 ${-pi/6}"/>
         <parent link="top_plate_link"/>
         <child link="right_camera_frame"/>
     </joint>
@@ -261,7 +261,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 
     <!-- Rear central camera -->
     <joint name="rear_camera_joint" type="fixed">
-        <origin xyz="-${base_x_size/4} 0 0.1" rpy="0 0 ${pi}"/>
+        <origin xyz="-${base_x_size/4} 0 0.1" rpy="0 0 ${2*pi/3}"/>
         <parent link="top_plate_link"/>
         <child link="rear_camera_frame"/>
     </joint>
