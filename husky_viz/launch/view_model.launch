@@ -3,6 +3,8 @@
 
     <arg name="laser_enabled" default="false"/>
     <arg name="kinect_enabled" default="false"/>
+    <arg name="use_gui" default="false"/>
+    <arg name="rviz_config" default="$(find husky_viz)/rviz/model_simple.rviz"/>
 
     <!-- Standalone launcher to visualize the robot model. -->
     <include file="$(find husky_description)/launch/description.launch">
@@ -11,10 +13,10 @@
     </include>
 
     <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
-        <param name="use_gui" value="true"/>
+        <param name="use_gui" value="$(arg use_gui)"/>
     </node>
 
-    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find husky_viz)/rviz/model.rviz"/>
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rviz_config)"/>
 
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
 </launch>
