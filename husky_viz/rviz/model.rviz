@@ -5,6 +5,7 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Ground-truth1/Shape1
+        - /TF1
       Splitter Ratio: 0.5
     Tree Height: 494
   - Class: rviz/Selection
@@ -267,7 +268,7 @@ Visualization Manager:
         base_footprint:
           Value: false
         base_link:
-          Value: false
+          Value: true
         front_bumper_link:
           Value: false
         front_left_wheel_link:
@@ -279,15 +280,15 @@ Visualization Manager:
         inertial_link:
           Value: false
         left_camera_frame:
-          Value: false
-        left_camera_optical_frame:
           Value: true
+        left_camera_optical_frame:
+          Value: false
         odom:
           Value: false
         rear_bumper_link:
           Value: false
         rear_camera_frame:
-          Value: false
+          Value: true
         rear_camera_optical_frame:
           Value: false
         rear_left_wheel_link:
@@ -295,7 +296,7 @@ Visualization Manager:
         rear_right_wheel_link:
           Value: false
         right_camera_frame:
-          Value: false
+          Value: true
         right_camera_optical_frame:
           Value: false
         top_chassis_link:
@@ -413,25 +414,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 9.86502266
+      Distance: 0.48652631
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.885104656
-        Y: 0.449970573
-        Z: 2.20681643
+        X: 0.856769383
+        Y: 0.117098026
+        Z: 0.623097956
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.805399477
+      Pitch: 0.355399996
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 2.90902138
+      Yaw: 6.22220325
     Saved: ~
 Window Geometry:
   Displays:

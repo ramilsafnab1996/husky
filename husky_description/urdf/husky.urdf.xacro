@@ -203,7 +203,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 
     <!--  Left front camera  -->
     <joint name="left_camera_joint" type="fixed">
-        <origin xyz="${base_x_size/4} ${base_y_size/4} 0.1" rpy="0 0 0"/>
+        <origin xyz="0.1 0.1 0.5" rpy="0 0 0"/>
         <parent link="top_plate_link"/>
         <child link="left_camera_frame"/>
     </joint>
@@ -211,7 +211,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     <link name="left_camera_frame">
         <visual>
             <geometry>
-                <box size="0.1 0.1 0.2"/>
+                <box size="0.02 0.02 0.05"/>
             </geometry>
         </visual>
 
@@ -232,7 +232,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 
     <!-- Right front camera -->
     <joint name="right_camera_joint" type="fixed">
-        <origin xyz="${base_x_size/4} -${base_y_size/4} 0.1" rpy="0 0 ${-pi/6}"/>
+        <origin xyz="0.05 -0.1 0.5" rpy="0 0 ${-pi/3}"/>
         <parent link="top_plate_link"/>
         <child link="right_camera_frame"/>
     </joint>
@@ -240,7 +240,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     <link name="right_camera_frame">
         <visual>
             <geometry>
-                <box size="0.1 0.1 0.2"/>
+                <box size="0.02 0.02 0.05"/>
             </geometry>
         </visual>
 
@@ -261,7 +261,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 
     <!-- Rear central camera -->
     <joint name="rear_camera_joint" type="fixed">
-        <origin xyz="-${base_x_size/4} 0 0.1" rpy="0 0 ${2*pi/3}"/>
+        <origin xyz="-0.2 0 0.5" rpy="0 0 ${2*pi/3}"/>
         <parent link="top_plate_link"/>
         <child link="rear_camera_frame"/>
     </joint>
@@ -269,7 +269,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     <link name="rear_camera_frame">
         <visual>
             <geometry>
-                <box size="0.1 0.1 0.2"/>
+                <box size="0.02 0.02 0.05"/>
             </geometry>
         </visual>
 
@@ -291,13 +291,12 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     <!-- Gazebo camera plugins -->
 
     <gazebo reference="left_camera_frame">
-        <sensor name="left_camera" type="camera">
+        <sensor name="left_camera" type="wideanglecamera">
             <update_rate>25</update_rate>
             <always_on>true</always_on>
 
             <camera>
-                <!-- 185 degrees -->
-                <horizontal_fov>${radians(89)}</horizontal_fov>
+                <horizontal_fov>${radians(185)}</horizontal_fov>
                 <image>
                     <width>754</width>
                     <height>480</height>
@@ -306,6 +305,13 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
                     <near>0.02</near>
                     <far>100</far>
                 </clip>
+
+                <lense>
+                    <type>orthographic</type>
+                    <scale_to_hfov>true</scale_to_hfov>
+                    <cutoff_angle>${pi/2}</cutoff_angle>
+                    <env_texture_size>1024</env_texture_size>
+                </lense>
             </camera>
 
             <plugin name="left_camera_controller" filename="libgazebo_ros_camera.so">
@@ -320,12 +326,12 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     </gazebo>
 
     <gazebo reference="right_camera_frame">
-        <sensor name="right_camera" type="camera">
+        <sensor name="right_camera" type="wideanglecamera">
             <update_rate>25</update_rate>
             <always_on>true</always_on>
 
             <camera>
-                <horizontal_fov>${radians(89)}</horizontal_fov>
+                <horizontal_fov>${radians(185)}</horizontal_fov>
                 <image>
                     <width>754</width>
                     <height>480</height>
@@ -334,6 +340,13 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
                     <near>0.02</near>
                     <far>100</far>
                 </clip>
+
+                <lense>
+                    <type>orthographic</type>
+                    <scale_to_hfov>true</scale_to_hfov>
+                    <cutoff_angle>${pi/2}</cutoff_angle>
+                    <env_texture_size>1024</env_texture_size>
+                </lense>
             </camera>
 
             <plugin name="right_camera_controller" filename="libgazebo_ros_camera.so">
@@ -348,12 +361,12 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     </gazebo>
 
     <gazebo reference="rear_camera_frame">
-        <sensor name="rear_camera" type="camera">
+        <sensor name="rear_camera" type="wideanglecamera">
             <update_rate>25</update_rate>
             <always_on>true</always_on>
 
             <camera>
-                <horizontal_fov>${radians(89)}</horizontal_fov>
+                <horizontal_fov>${radians(185)}</horizontal_fov>
                 <image>
                     <width>754</width>
                     <height>480</height>
@@ -362,6 +375,13 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
                     <near>0.02</near>
                     <far>100</far>
                 </clip>
+
+                <lense>
+                    <type>orthographic</type>
+                    <scale_to_hfov>true</scale_to_hfov>
+                    <cutoff_angle>${pi/2}</cutoff_angle>
+                    <env_texture_size>1024</env_texture_size>
+                </lense>
             </camera>
 
             <plugin name="rear_camera_controller" filename="libgazebo_ros_camera.so">
