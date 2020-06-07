@@ -114,7 +114,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     <!-- Can be modified with environment variables in /etc/ros/setup.bash -->
     <link name="imu_link"/>
     <joint name="imu_joint" type="fixed">
-        <origin xyz="$(optenv HUSKY_IMU_XYZ 0.19 0 0.149)" rpy="$(optenv HUSKY_IMU_RPY 0 -1.5708 3.1416)"/>
+        <origin xyz="$(optenv HUSKY_IMU_XYZ 0.19 0 0.149)" rpy="$(optenv HUSKY_IMU_RPY 0 ${-pi/2} ${pi})"/>
         <parent link="base_link"/>
         <child link="imu_link"/>
     </joint>
@@ -178,12 +178,12 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
             <updateRate>500.0</updateRate>
             <bodyName>base_link</bodyName>
             <topicName>imu/data</topicName>
-            <accelDrift>0.005 0.005 0.005</accelDrift>
-            <accelGaussianNoise>0.005 0.005 0.005</accelGaussianNoise>
-            <rateDrift>0.005 0.005 0.005</rateDrift>
-            <rateGaussianNoise>0.005 0.005 0.005</rateGaussianNoise>
-            <headingDrift>0.005</headingDrift>
-            <headingGaussianNoise>0.005</headingGaussianNoise>
+            <accelDrift>0.0 0.0 0.0</accelDrift>
+            <accelGaussianNoise>0.0001 0.0001 0.0001</accelGaussianNoise>
+            <rateDrift>0.0 0.0 0.0</rateDrift>
+            <rateGaussianNoise>0.0001 0.0001 0.0001</rateGaussianNoise>
+            <headingDrift>0.00001</headingDrift>
+            <headingGaussianNoise>0.0001</headingGaussianNoise>
         </plugin>
     </gazebo>
 
@@ -191,7 +191,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     <gazebo>
         <plugin filename="libgazebo_ros_p3d.so" name="gazebo_ros_p3d">
             <alwaysOn>true</alwaysOn>
-            <updateRate>500.0</updateRate>
+            <updateRate>100.0</updateRate>
             <!-- world frame is provided by Gazebo, it is not present in /tf topic -->
             <frameName>world</frameName>
             <bodyName>base_link</bodyName>
@@ -211,13 +211,13 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     <link name="left_camera_frame">
         <visual>
             <geometry>
-                <box size="0.0001 0.0001 0.0001"/>
+                <box size="0.000001 0.000001 0.000001"/>
             </geometry>
         </visual>
 
         <collision>
             <geometry>
-                <box size="0.001 0.001 0.001"/>
+                <box size="0.000001 0.000001 0.000001"/>
             </geometry>
         </collision>
     </link>
@@ -232,7 +232,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 
     <!-- Right front camera -->
     <joint name="right_camera_joint" type="fixed">
-        <origin xyz="0.05 -0.3 0.5" rpy="0 0 0"/>
+        <origin xyz="0.3 -0.3 0.5" rpy="0 0 0"/>
         <parent link="top_plate_link"/>
         <child link="right_camera_frame"/>
     </joint>
@@ -240,13 +240,13 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     <link name="right_camera_frame">
         <visual>
             <geometry>
-                <box size="0.0001 0.0001 0.0001"/>
+                <box size="0.000001 0.000001 0.000001"/>
             </geometry>
         </visual>
 
         <collision>
             <geometry>
-                <box size="0.001 0.001 0.001"/>
+                <box size="0.000001 0.000001 0.000001"/>
             </geometry>
         </collision>
     </link>
@@ -261,7 +261,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 
     <!-- Rear central camera -->
     <joint name="rear_camera_joint" type="fixed">
-        <origin xyz="-0.5 0 0.5" rpy="0 0 ${2*pi/3}"/>
+        <origin xyz="-0.5 -0.3 0.5" rpy="0 0 ${-pi/2}"/>
         <parent link="top_plate_link"/>
         <child link="rear_camera_frame"/>
     </joint>
@@ -269,13 +269,13 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     <link name="rear_camera_frame">
         <visual>
             <geometry>
-                <box size="0.0001 0.0001 0.0001"/>
+                <box size="0.000001 0.000001 0.000001"/>
             </geometry>
         </visual>
 
         <collision>
             <geometry>
-                <box size="0.001 0.001 0.001"/>
+                <box size="0.000001 0.000001 0.000001"/>
             </geometry>
         </collision>
     </link>
@@ -310,8 +310,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
                 <fun>sin</fun>
             </custom_function>
 
-<!--            <scale_to_hfov>true</scale_to_hfov>-->
-<!--            <cutoff_angle>${radians(90)}</cutoff_angle>-->
+            <!--            <scale_to_hfov>true</scale_to_hfov>-->
+            <!--            <cutoff_angle>${radians(90)}</cutoff_angle>-->
             <env_texture_size>1024</env_texture_size>
         </lense>
     </xacro:macro>
@@ -372,6 +372,118 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
                 <imageTopicName>image_raw</imageTopicName>
                 <cameraInfoTopicName>camera_info</cameraInfoTopicName>
                 <frameName>rear_camera_optical_frame</frameName>
+            </plugin>
+        </sensor>
+    </gazebo>
+
+    <!--  additional cameras  -->
+
+    <!-- Left front camera (perspective) -->
+    <joint name="perspective_left_camera_joint" type="fixed">
+        <origin xyz="0.3 0.3 0.5" rpy="0 0 0"/>
+        <parent link="top_plate_link"/>
+        <child link="perspective_left_camera_frame"/>
+    </joint>
+
+    <link name="perspective_left_camera_frame">
+        <visual>
+            <geometry>
+                <box size="0.000001 0.000001 0.000001"/>
+            </geometry>
+        </visual>
+
+        <collision>
+            <geometry>
+                <box size="0.000001 0.000001 0.000001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="perspective_left_camera_optical_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="${-pi/2} 0 ${-pi/2}"/>
+        <parent link="perspective_left_camera_frame"/>
+        <child link="perspective_left_camera_optical_frame"/>
+    </joint>
+
+    <link name="perspective_left_camera_optical_frame"/>
+
+    <!-- Right front camera (perspective) -->
+    <joint name="perspective_right_camera_joint" type="fixed">
+        <origin xyz="0.3 -0.3 0.5" rpy="0 0 0"/>
+        <parent link="top_plate_link"/>
+        <child link="perspective_right_camera_frame"/>
+    </joint>
+
+    <link name="perspective_right_camera_frame">
+        <visual>
+            <geometry>
+                <box size="0.000001 0.000001 0.000001"/>
+            </geometry>
+        </visual>
+
+        <collision>
+            <geometry>
+                <box size="0.000001 0.000001 0.000001"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="perspective_right_camera_optical_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="${-pi/2} 0 ${-pi/2}"/>
+        <parent link="perspective_right_camera_frame"/>
+        <child link="perspective_right_camera_optical_frame"/>
+    </joint>
+
+    <link name="perspective_right_camera_optical_frame"/>
+
+    <gazebo reference="perspective_left_camera_frame">
+        <sensor name="perspective_left_camera" type="camera">
+            <update_rate>25</update_rate>
+            <always_on>true</always_on>
+            <camera>
+                <horizontal_fov>${radians(89)}</horizontal_fov>
+                <image>
+                    <width>754</width>
+                    <height>480</height>
+                </image>
+                <clip>
+                    <near>0.15</near>
+                    <far>100</far>
+                </clip>
+            </camera>
+            <plugin name="perspective_left_camera_controller" filename="libgazebo_ros_camera.so">
+                <alwaysOn>true</alwaysOn>
+                <updateRate>0</updateRate>
+                <cameraName>camera/perspective/left</cameraName>
+                <imageTopicName>image_raw</imageTopicName>
+                <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+                <frameName>perspective_left_camera_optical_frame</frameName>
+            </plugin>
+        </sensor>
+    </gazebo>
+
+    <gazebo reference="perspective_right_camera_frame">
+        <sensor name="perspective_right_camera" type="camera">
+            <update_rate>25</update_rate>
+            <always_on>true</always_on>
+            <camera>
+                <horizontal_fov>${radians(89)}</horizontal_fov>
+                <image>
+                    <width>754</width>
+                    <height>480</height>
+                </image>
+                <clip>
+                    <near>0.15</near>
+                    <far>100</far>
+                </clip>
+            </camera>
+            <plugin name="perspective_right_camera_controller" filename="libgazebo_ros_camera.so">
+                <alwaysOn>true</alwaysOn>
+                <updateRate>0</updateRate>
+                <cameraName>camera/perspective/right</cameraName>
+                <imageTopicName>image_raw</imageTopicName>
+                <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+                <frameName>perspective_right_camera_optical_frame</frameName>
             </plugin>
         </sensor>
     </gazebo>
