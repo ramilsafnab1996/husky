@@ -1,6 +1,10 @@
 husky
 =====
 
+This is the modification of Husky model:
+- wideangle cameras
+- LiDAR
+
 Common ROS packages for the Clearpath Husky, useable for both simulation and
 real robot operation.
 
