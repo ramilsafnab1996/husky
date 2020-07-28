@@ -26,10 +26,9 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 @author Ramil Safin (safin.ramil@it.kfu.ru)
 -->
 <launch>
-
     <arg name="gui" default="true"/>
     <arg name="rviz" default="false"/>
-    <arg name="world_name" default="$(find husky_gazebo)/worlds/flat.world"/>
+    <arg name="world_name" default="$(find husky_gazebo)/worlds/default_light.world"/>
 
     <include file="$(find gazebo_ros)/launch/empty_world.launch">
         <arg name="world_name" value="$(arg world_name)"/>
@@ -42,11 +41,14 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     <include file="$(find husky_gazebo)/launch/spawn_husky.launch">
         <arg name="laser_enabled" value="false"/>
         <arg name="kinect_enabled" value="false"/>
+        <arg name="x" value="7"/>
+        <arg name="y" value="-3.5"/>
+        <arg name="z" value="0.15"/>
+        <arg name="yaw" value="$(eval pi)"/>
     </include>
 
     <node if="$(arg rviz)" name="rviz" pkg="rviz" type="rviz" args="-d $(find husky_viz)/rviz/model.rviz"/>
 
     <!-- fixed tf between the world (Gazebo) and odom (EKF localization) frames -->
     <node name="static_pub" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 world odom 100"/>
-
 </launch>
