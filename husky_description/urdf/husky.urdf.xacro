@@ -110,12 +110,13 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
   <!-- IMU Link is the standard mounting position for the UM6 IMU.-->
   <!-- Can be modified with environment variables in /etc/ros/setup.bash -->
   <link name="imu_link"/>
-    <joint name="imu_joint" type="fixed">
-      <origin xyz="$(optenv HUSKY_IMU_XYZ 0.19 0 0.149)" rpy="$(optenv HUSKY_IMU_RPY 0 -${pi/2} ${pi})"/>
-      <parent link="base_link"/>
-      <child link="imu_link"/>
-    </joint>
-  
+
+  <joint name="imu_joint" type="fixed">
+    <origin xyz="$(optenv HUSKY_IMU_XYZ 0.19 0 0.149)" rpy="$(optenv HUSKY_IMU_RPY 0 -${pi/2} ${pi})"/>
+    <parent link="base_link"/>
+    <child link="imu_link"/>
+  </joint>
+
   <!-- Husky wheel macros -->
   <xacro:husky_wheel wheel_prefix="front_left">
     <origin xyz="${wheelbase/2} ${track/2} ${wheel_vertical_offset}" rpy="0 0 0"/>
@@ -146,11 +147,9 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
           <parent link="top_plate_link"/>
           <child link="base_laser_mount"/>
       </joint>
-
   </xacro:if>
 
   <xacro:if value="$(arg kinect_enabled)">
-
       <xacro:sensor_arch prefix="" parent="top_plate_link">
           <origin xyz="-0.35 0 0.51" rpy="0 0 -3.14"/>
       </xacro:sensor_arch>
@@ -201,201 +200,137 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 
   <!--  Left front camera  -->
   <joint name="left_camera_joint" type="fixed">
-      <origin xyz="${base_x_size/4} ${base_y_size/4} 0.1"/>
-      <parent link="top_plate_link"/>
-      <child link="left_camera_frame"/>
+    <origin xyz="${base_x_size/4} ${base_y_size/4} 0.1"/>
+    <parent link="top_plate_link"/>
+    <child link="left_camera_frame"/>
   </joint>
 
   <link name="left_camera_frame">
-      <visual>
-          <geometry>
-              <box size="0.1 0.1 0.2"/>
-          </geometry>
-      </visual>
-
-      <collision>
-          <geometry>
-              <box size="0.001 0.001 0.001"/>
-          </geometry>
-      </collision>
+    <visual>
+      <geometry>
+        <box size="0.1 0.1 0.2"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
   </link>
 
   <joint name="left_camera_optical_joint" type="fixed">
-      <origin xyz="0 0 0" rpy="${-pi/2} 0 ${-pi/2}"/>
-      <parent link="left_camera_frame"/>
-      <child link="left_camera_optical_frame"/>
+    <origin xyz="0 0 0" rpy="${-pi/2} 0 ${-pi/2}"/>
+    <parent link="left_camera_frame"/>
+    <child link="left_camera_optical_frame"/>
   </joint>
 
   <link name="left_camera_optical_frame"/>
 
   <!-- Right front camera -->
   <joint name="right_camera_joint" type="fixed">
-      <origin xyz="${base_x_size/4} -${base_y_size/4} 0.1"/>
-      <parent link="top_plate_link"/>
-      <child link="right_camera_frame"/>
+    <origin xyz="${base_x_size/4} -${base_y_size/4} 0.1"/>
+    <parent link="top_plate_link"/>
+    <child link="right_camera_frame"/>
   </joint>
 
   <link name="right_camera_frame">
-      <visual>
-          <geometry>
-              <box size="0.1 0.1 0.2"/>
-          </geometry>
-      </visual>
+    <visual>
+      <geometry>
+        <box size="0.1 0.1 0.2"/>
+      </geometry>
+    </visual>
 
-      <collision>
-          <geometry>
-              <box size="0.001 0.001 0.001"/>
-          </geometry>
-      </collision>
+    <collision>
+      <geometry>
+        <box size="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
   </link>
 
   <joint name="right_camera_optical_joint" type="fixed">
-      <origin xyz="0 0 0" rpy="${-pi/2} 0 ${-pi/2}"/>
-      <parent link="right_camera_frame"/>
-      <child link="right_camera_optical_frame"/>
+    <origin xyz="0 0 0" rpy="${-pi/2} 0 ${-pi/2}"/>
+    <parent link="right_camera_frame"/>
+    <child link="right_camera_optical_frame"/>
   </joint>
 
   <link name="right_camera_optical_frame"/>
 
-  <!-- Rear central camera -->
+  <!-- Back central camera -->
   <joint name="rear_camera_joint" type="fixed">
-      <origin xyz="-${base_x_size/4} 0 0.1" rpy="0 0 ${pi}"/>
-      <parent link="top_plate_link"/>
-      <child link="rear_camera_frame"/>
+    <origin xyz="-${base_x_size/4} ${-base_y_size/4} 0.1" rpy="0 0 -${pi/2}"/>
+    <parent link="top_plate_link"/>
+    <child link="rear_camera_frame"/>
   </joint>
 
   <link name="rear_camera_frame">
-      <visual>
-          <geometry>
-              <box size="0.1 0.1 0.2"/>
-          </geometry>
-      </visual>
+    <visual>
+      <geometry>
+        <box size="0.1 0.1 0.2"/>
+      </geometry>
+    </visual>
 
-      <collision>
-          <geometry>
-              <box size="0.001 0.001 0.001"/>
-          </geometry>
-      </collision>
+    <collision>
+      <geometry>
+        <box size="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
   </link>
 
   <joint name="rear_camera_optical_joint" type="fixed">
-      <origin xyz="0 0 0" rpy="${-pi/2} 0 ${-pi/2}"/>
-      <parent link="rear_camera_frame"/>
-      <child link="rear_camera_optical_frame"/>
+    <origin xyz="0 0 0" rpy="${-pi/2} 0 ${-pi/2}"/>
+    <parent link="rear_camera_frame"/>
+    <child link="rear_camera_optical_frame"/>
   </joint>
 
   <link name="rear_camera_optical_frame"/>
 
-  <!-- Gazebo camera plugins -->
+  <xacro:macro name="fisheye_camera" params="prefix">
+    <gazebo reference="${prefix}_camera_frame">
 
-  <gazebo reference="left_camera_frame">
-      <sensor name="left_camera" type="wideanglecamera">
-          <update_rate>25</update_rate>
-          <always_on>true</always_on>
+      <sensor name="${prefix}_camera" type="wideanglecamera">
+            <update_rate>25</update_rate>
+            <always_on>true</always_on>
 
-          <camera>
-              <!-- 185 degrees -->
-              <horizontal_fov>${radians(185)}</horizontal_fov>
-              <image>
-                  <width>754</width>
-                  <height>480</height>
-              </image>
-              <clip>
-                  <near>0.02</near>
-                  <far>100</far>
-              </clip>
-              <lens>
-                  <type>orthographic</type>
+            <camera>
+                <!-- 185 degrees -->
+                <horizontal_fov>${radians(180)}</horizontal_fov>
+                <image>
+                    <width>754</width>
+                    <height>480</height>
+                </image>
+                <clip>
+                    <near>0.02</near>
+                    <far>100</far>
+                </clip>
+                <lens>
+                    <type>orthographic</type>
 
-                  <!-- if it is set to `true` your horizontal FOV will remain as defined -->
-                  <!-- otherwise it depends on lens type and custom function, if there is one -->
-                  <scale_to_hfov>true</scale_to_hfov>
+                    <!-- if it is set to `true` your horizontal FOV will remain as defined -->
+                    <!-- otherwise it depends on lens type and custom function, if there is one -->
+                    <scale_to_hfov>true</scale_to_hfov>
 
-                  <!-- clip everything that is outside of this angle -->
-                  <cutoff_angle>${pi/2]</cutoff_angle>
+                    <!-- clip everything that is outside of this angle -->
+                    <cutoff_angle>${pi/2]</cutoff_angle>
 
-                  <!-- resolution of the cube-map texture, the higher it is - the sharper is your image -->
-                  <env_texture_size>512</env_texture_size>
-              </lens>
-          </camera>
+                    <!-- resolution of the cube-map texture, the higher it is - the sharper is your image -->
+                    <env_texture_size>512</env_texture_size>
+                </lens>
+            </camera>
 
-          <plugin name="left_camera_controller" filename="libgazebo_ros_camera.so">
-              <alwaysOn>true</alwaysOn>
-              <updateRate>0</updateRate>
-              <cameraName>camera/left</cameraName>
-              <imageTopicName>image_raw</imageTopicName>
-              <cameraInfoTopicName>camera_info</cameraInfoTopicName>
-              <frameName>left_camera_optical_frame</frameName>
-          </plugin>
-      </sensor>
-  </gazebo>
+            <plugin name="${prefix}_camera_controller" filename="libgazebo_ros_camera.so">
+                <alwaysOn>true</alwaysOn>
+                <updateRate>0</updateRate>
+                <cameraName>camera/${prefix}</cameraName>
+                <imageTopicName>image_raw</imageTopicName>
+                <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+                <frameName>${prefix}_camera_optical_frame</frameName>
+            </plugin>
+        </sensor>
+    </gazebo>
+  </xacro:macro>
 
-  <gazebo reference="right_camera_frame">
-      <sensor name="right_camera" type="wideanglecamera">
-          <update_rate>25</update_rate>
-          <always_on>true</always_on>
-
-          <camera>
-              <horizontal_fov>${radians(185)}</horizontal_fov>
-              <image>
-                  <width>754</width>
-                  <height>480</height>
-              </image>
-              <clip>
-                  <near>0.02</near>
-                  <far>100</far>
-              </clip>
-              <lens>
-                  <type>orthographic</type>
-                  <scale_to_hfov>true</scale_to_hfov>
-                  <cutoff_angle>${pi/2]</cutoff_angle>
-                  <env_texture_size>512</env_texture_size>
-              </lens>
-          </camera>
-
-          <plugin name="right_camera_controller" filename="libgazebo_ros_camera.so">
-              <alwaysOn>true</alwaysOn>
-              <updateRate>0</updateRate>
-              <cameraName>camera/right</cameraName>
-              <imageTopicName>image_raw</imageTopicName>
-              <cameraInfoTopicName>camera_info</cameraInfoTopicName>
-              <frameName>right_camera_optical_frame</frameName>
-          </plugin>
-      </sensor>
-  </gazebo>
-
-  <gazebo reference="rear_camera_frame">
-      <sensor name="rear_camera" type="wideanglecamera">
-          <update_rate>25</update_rate>
-          <always_on>true</always_on>
-
-          <camera>
-              <horizontal_fov>${radians(185)}</horizontal_fov>
-              <image>
-                  <width>754</width>
-                  <height>480</height>
-              </image>
-              <clip>
-                  <near>0.02</near>
-                  <far>100</far>
-              </clip>
-              <lens>
-                  <type>orthographic</type>
-                  <scale_to_hfov>true</scale_to_hfov>
-                  <cutoff_angle>${pi/2]</cutoff_angle>
-                  <env_texture_size>512</env_texture_size>
-              </lens>
-          </camera>
-
-          <plugin name="rear_camera_controller" filename="libgazebo_ros_camera.so">
-              <alwaysOn>true</alwaysOn>
-              <updateRate>0</updateRate>
-              <cameraName>camera/rear</cameraName>
-              <imageTopicName>image_raw</imageTopicName>
-              <cameraInfoTopicName>camera_info</cameraInfoTopicName>
-              <frameName>rear_camera_optical_frame</frameName>
-          </plugin>
-      </sensor>
-  </gazebo>
+  <xacro:fisheye_camera prefix="left"/>
+  <xacro:fisheye_camera prefix="right"/>
+  <xacro:fisheye_camera prefix="rear"/>
 
 </robot>
