@@ -255,9 +255,9 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 
   <link name="right_camera_optical_frame"/>
 
-  <!-- Back central camera -->
+  <!-- Back camera -->
   <joint name="rear_camera_joint" type="fixed">
-    <origin xyz="-${base_x_size/4} ${-base_y_size/4} 0.1" rpy="0 0 -${pi/2}"/>
+    <origin xyz="-${base_x_size/4} ${-base_y_size/4} 0.1" rpy="0 0 ${-pi/2}"/>
     <parent link="top_plate_link"/>
     <child link="rear_camera_frame"/>
   </joint>
@@ -292,8 +292,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
             <always_on>true</always_on>
 
             <camera>
-                <!-- 185 degrees -->
-                <horizontal_fov>${radians(180)}</horizontal_fov>
+                <horizontal_fov>${radians(185)}</horizontal_fov>
                 <image>
                     <width>754</width>
                     <height>480</height>
@@ -307,7 +306,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 
                     <!-- if it is set to `true` your horizontal FOV will remain as defined -->
                     <!-- otherwise it depends on lens type and custom function, if there is one -->
-                    <scale_to_hfov>true</scale_to_hfov>
+                    <scale_to_hfov>false</scale_to_hfov>
 
                     <!-- clip everything that is outside of this angle -->
                     <cutoff_angle>${pi/2]</cutoff_angle>
